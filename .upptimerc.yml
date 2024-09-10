@@ -1,5 +1,4 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
+owner: upptime # Your GitHub organization or username
 repo: upptime # The name of this repository
 
 sites:
@@ -16,10 +15,139 @@ sites:
     port: 80
     check: "tcp-ping"
     ipv6: true
+  - name: ConnectHear Sign-Up API # New addition for your API
+    url: https://app.connecthear.org/api/v1/customer/sign-up
+    method: POST
+    body: |
+      {
+        "name": "Test User",
+        "email": "testuser@example.com",
+        "password": "password1234"
+      }
+    expectedStatusCodes: [200, 201, 422] # Define the acceptable status codes here
+    check: "http" # HTTP check for API
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+  - name: ConnectHear Login API # Monitoring the login API
+    url: https://app.connecthear.org/api/v1/customer/login
+    method: POST
+    body: |
+      {
+        "email": "testuser@example.com",
+        "password": "password1234"
+      }
+    expectedStatusCodes: [200, 401, 422] # 200 for success, 401 for invalid credentials, 422 for validation errors
+    check: "http"
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+  - name: ConnectHear Google Login API # Monitoring the Google Login API
+    url: https://app.connecthear.org/api/v1/customer/google-login
+    method: POST
+    body: |
+      {
+        "name": "Test User",
+        "email": "testuser@example.com",
+        "google_id": "google-test-id-123"
+      }
+    expectedStatusCodes: [200, 422] # 200 for successful login, 422 for validation errors
+    check: "http"
+    headers:
+      Content-Type: application/json
+      Accept: application/json  
+  - name: ConnectHear Forgot Password API # Monitoring the Forgot Password API
+    url: https://app.connecthear.org/api/v1/customer/forgot-password
+    method: POST
+    body: |
+      {
+        "email": "testuser@example.com"
+      }
+    expectedStatusCodes: [200, 422] # 200 for success, 422 for validation errors
+    check: "http"
+    headers:
+      Content-Type: application/json
+      Accept: application/json  
+  - name: ConnectHear Verify Code API # Monitoring the Verify Code API
+    url: https://app.connecthear.org/api/v1/customer/verify-code
+    method: POST
+    body: |
+      {
+        "email": "testuser@example.com",
+        "verification_code": "1234",
+        "password": "newpassword",
+        "password_confirmation": "newpassword"
+      }
+    expectedStatusCodes: [200, 422] # 200 for success, 422 for validation errors
+    check: "http"
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+  - name: ConnectHear Verify SMS Code API # Monitoring the Verify SMS Code API
+    url: https://app.connecthear.org/api/v1/customer/verify-sms-code
+    method: POST
+    body: |
+      {
+        "email": "testuser@example.com",
+        "password": "strongpassword",
+        "mobile_number": "1234567890",
+        "verification_code": "1234"
+      }
+    expectedStatusCodes: [200, 422] # 200 for success, 422 for validation errors or invalid OTP
+    check: "http"
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+  - name: ConnectHear Reset Password API # Monitoring the Reset Password API
+    url: https://app.connecthear.org/api/v1/customer/reset-password
+    method: POST
+    headers:
+      Content-Type: application/json
+    body: '{"email": "user@example.com", "password": "newpassword123", "password_confirmation": "newpassword123"}'
+    expectedStatusCodes: [200, 422] # 200 for success, 422 for validation errors
+    check: "http"
+  - name: ConnectHear Resend OTP API # Monitoring the Resend OTP API
+    url: https://app.connecthear.org/api/v1/customer/resend-otp
+    method: POST
+    headers:
+      Content-Type: application/json
+    body: '{"email": "user@example.com"}'
+    expectedStatusCodes: [200, 422] # 200 for success, 422 for validation errors
+    check: "http"
+  # - name: ConnectHear Get Profile API # Monitoring the Get Profile API
+  #   url: https://app.connecthear.org/api/v1/customer/get-profile
+  #   method: GET
+  #   headers:
+  #     Content-Type: application/json
+  #     Authorization: "Bearer YOUR_ACCESS_TOKEN" # Replace with a valid token
+  #   expectedStatusCodes: [200, 403] # 200 for success, 403 for disabled accounts
+  #   check: "http"
+  # - name: ConnectHear Logout API # Monitoring the Logout API
+  #   url: https://app.connecthear.org/api/v1/logout
+  #   method: POST
+  #   headers:
+  #     Content-Type: application/json
+  #     Authorization: "Bearer YOUR_ACCESS_TOKEN" # Replace with a valid token
+  #   expectedStatusCodes: [200] # 200 for successful logout
+  #   check: "http"
+  # - name: ConnectHear Update Device Token API # Monitoring the Update Device Token API
+  #   url: https://app.connecthear.org/api/v1/customer/update-device-token
+  #   method: POST
+  #   headers:
+  #     Content-Type: application/json
+  #     Authorization: "Bearer YOUR_ACCESS_TOKEN" # Replace with a valid token
+  #   expectedStatusCodes: [200, 422] # 200 for success, 422 for validation errors
+  #   check: "http"
+  # - name: ConnectHear Change Password API # Monitoring the Change Password API
+  #   url: https://app.connecthear.org/api/v1/customer/change-password
+  #   method: POST
+  #   headers:
+  #     Content-Type: application/json
+  #     Authorization: "Bearer YOUR_ACCESS_TOKEN" # Replace with a valid token
+  #   expectedStatusCodes: [200, 422] # 200 for success, 422 for validation errors
+  #   check: "http"
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
   cname: demo.upptime.js.org
   # baseUrl: /your-repo-name
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
@@ -31,6 +159,3 @@ status-website:
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
