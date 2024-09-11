@@ -1,5 +1,5 @@
-owner: upptime # Your GitHub organization or username
-repo: upptime # The name of this repository
+owner: zain-2002 # Your GitHub username
+repo: v1-app-uptime # The name of this repository
 
 sites:
   # - name: Google
@@ -139,7 +139,7 @@ sites:
   #   check: "http"
 
 status-website:
-  cname: demo.upptime.js.org
+  # cname: demo.upptime.js.org
   # baseUrl: /your-repo-name
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Upptime
