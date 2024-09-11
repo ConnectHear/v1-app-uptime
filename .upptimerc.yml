@@ -81,7 +81,7 @@ sites:
     url: https://app.connecthear.org/api/v1/customer/reset-password
     method: POST
     headers:
-      - Content-Type: application/json
+      - "Content-Type: application/json"
     body: '{"email": "user@example.com", "password": "newpassword123", "password_confirmation": "newpassword123"}'
     expectedStatusCodes:
       - 200
@@ -91,7 +91,7 @@ sites:
     url: https://app.connecthear.org/api/v1/customer/resend-otp
     method: POST
     headers:
-      - Content-Type: application/json
+      - "Content-Type: application/json"
     body: '{"email": "user@example.com"}'
     expectedStatusCodes:
       - 200
