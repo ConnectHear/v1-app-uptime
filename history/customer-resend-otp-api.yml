@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/customer/resend-otp
 status: up
 code: 422
-responseTime: 48
-lastUpdated: 2024-09-11T13:22:23.863Z
+responseTime: 119
+lastUpdated: 2024-09-11T23:15:43.113Z
 startTime: 2024-09-11T12:19:46.909Z
 generator: Upptime <https://github.com/upptime/upptime>
