@@ -25,7 +25,7 @@ sites:
       - 422
     check: "https"
     headers:
-      - Content-Type: application/json
+      - "Content-Type: application/json"
   - name: ConnectHear Login API # Monitoring the login API
     url: https://app.connecthear.org/api/v1/customer/login
     method: POST
