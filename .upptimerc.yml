@@ -165,27 +165,29 @@ sites:
   #   headers:
   #     - "Content-Type: application/json"
   #     - "Authorization: Bearer <your_access_token>"
-  - name: Customer Complaint API
-    url: https://app.connecthear.org/api/v1/customer/create-complaint
-    method: POST
-    body: '{"contact_number": "1234567890", "complaint": "This is a test complaint."}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-  - name: Customer Create Video Session API
-    url: https://app.connecthear.org/api/v1/customer/create-video-session
-    method: POST
-    body: '{"latitude": 25.276987, "longitude": 55.296249}'
-    expectedStatusCodes:
-      - 200
-      - 402
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
+  # - name: Customer Complaint API
+  #   url: https://app.connecthear.org/api/v1/customer/create-complaint
+  #   method: POST
+  #   body: '{"contact_number": "1234567890", "complaint": "This is a test complaint."}'
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Content-Type: application/json"
+  #     - "Authorization: Bearer your_access_token"
+  # - name: Customer Create Video Session API
+  #   url: https://app.connecthear.org/api/v1/customer/create-video-session
+  #   method: POST
+  #   body: '{"latitude": 25.276987, "longitude": 55.296249}'
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 402
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Content-Type: application/json"
+  #     - "Authorization: Bearer your_access_token"
   # - name: Customer Create Call API
   #   url: https://app.connecthear.org/api/v1/customer/create-call
   #   method: POST
@@ -196,6 +198,7 @@ sites:
   #   check: "https"
   #   headers:
   #     - "Content-Type: application/json"
+  #     - "Authorization: Bearer your_access_token"
   # - name: ConnectHear Get Reviews API
   #   url: https://app.connecthear.org/api/v1/customer/get-reviews
   #   method: GET
@@ -204,12 +207,14 @@ sites:
   #   check: "https"
   #   headers:
   #     - "Authorization: Bearer {your_token_here}"  # Replace with appropriate authorization if needed
-  - name: Customer Plans API
-    url: https://app.connecthear.org/api/v1/customer/get-plans
-    method: GET
-    expectedStatusCodes:
-      - 200
-    check: "https"
+  # - name: Customer Plans API
+  #   url: https://app.connecthear.org/api/v1/customer/get-plans
+  #   method: GET
+  #   expectedStatusCodes:
+  #     - 200
+  #   check: "https"
+  #   headers:
+  #     - "Authorization: Bearer your_access_token"
   - name: ConnectHear Update Profile API
     url: https://app.connecthear.org/api/v1/customer/update-profile
     method: POST
@@ -220,26 +225,28 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-  - name: Customer Subscription API
-    url: https://app.connecthear.org/api/v1/customer/make-subscription
-    method: POST
-    body: '{"plan_id": "123456"}'
-    expectedStatusCodes:
-      - 200
-      - 400
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-  - name: Customer Update Monitoring Session Status API
-    url: https://app.connecthear.org/api/v1/customer/update-monitoring-session-status
-    method: POST
-    body: '{"monitoring_id": "abc123", "status": 2, "call_duration": "00:30:00"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
+  # - name: Customer Subscription API
+  #   url: https://app.connecthear.org/api/v1/customer/make-subscription
+  #   method: POST
+  #   body: '{"plan_id": "123456"}'
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 400
+  #   check: "https"
+  #   headers:
+  #     - "Content-Type: application/json"
+  #     - "Authorization: Bearer your_access_token"
+  # - name: Customer Update Monitoring Session Status API
+  #   url: https://app.connecthear.org/api/v1/customer/update-monitoring-session-status
+  #   method: POST
+  #   body: '{"monitoring_id": "abc123", "status": 2, "call_duration": "00:30:00"}'
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Content-Type: application/json"
+  #     - "Authorization: Bearer your_access_token"
   # - name: Customer Get Call Logs API
   #   url: https://app.connecthear.org/api/v1/customer/get-call-logs
   #   method: GET
@@ -318,26 +325,28 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-  - name: Interpreter Files Add API
-    url: https://app.connecthear.org/api/v1/interpreter/files-add
-    method: POST
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    body: '{"avatar": "base64_encoded_avatar", "cnic": "base64_encoded_cnic"}'
-    headers:
-      - "Content-Type: application/json"
-  - name: Interpreter Update Device Token API
-    url: https://app.connecthear.org/api/v1/interpreter/update-device-token
-    method: POST
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    body: '{"device_token": "your_device_token", "device_type": "your_device_type"}'
-    headers:
-      - "Content-Type: application/json"
+  # - name: Interpreter Files Add API
+  #   url: https://app.connecthear.org/api/v1/interpreter/files-add
+  #   method: POST
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   body: '{"avatar": "base64_encoded_avatar", "cnic": "base64_encoded_cnic"}'
+  #   headers:
+  #     - "Content-Type: application/json"
+  #     - "Authorization: Bearer your_access_token"
+  # - name: Interpreter Update Device Token API
+  #   url: https://app.connecthear.org/api/v1/interpreter/update-device-token
+  #   method: POST
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   body: '{"device_token": "your_device_token", "device_type": "your_device_type"}'
+  #   headers:
+  #     - "Content-Type: application/json"
+  #     - "Authorization: Bearer your_access_token"
   # - name: Interpreter Logout API
   #   url: https://app.connecthear.org/api/v1/interpreter/logout
   #   method: POST
@@ -370,16 +379,17 @@ sites:
   #     - "Authorization: Bearer your_access_token"
   #     - "Content-Type: application/json"
 
-  - name: Interpreter Create Complaint API
-    url: https://app.connecthear.org/api/v1/interpreter/create-complaint
-    method: POST
-    body: '{"contact_number": "1234567890", "complaint": "Complaint description here"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
+  # - name: Interpreter Create Complaint API
+  #   url: https://app.connecthear.org/api/v1/interpreter/create-complaint
+  #   method: POST
+  #   body: '{"contact_number": "1234567890", "complaint": "Complaint description here"}'
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Content-Type: application/json"
+  #     - "Authorization: Bearer your_access_token"
   # - name: Interpreter Update Archive ID API
   #   url: https://app.connecthear.org/api/v1/interpreter/update-archive-id
   #   method: POST
@@ -481,7 +491,7 @@ sites:
 
 status-website:
   baseUrl: /v1-app-uptime
-  logoUrl: https://avatars.githubusercontent.com/u/94858144?s=200&v=4
+  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: ConnectHear v1 App Uptime
   introTitle: "This is ConnectHear's uptime monitor and status page, powered entirely by GitHub."
   introMessage: This is a status page which uses **real-time** data from our [GitHub repository](https://github.com/ConnectHear/v1-app-runtime). No server required — just GitHub Actions, Issues, and Pages. 
