@@ -27,8 +27,8 @@ sites:
     expectedStatusCodes: [200, 201, 422] # Define the acceptable status codes here
     check: "http" # HTTP check for API
     headers:
-      Content-Type: application/json
-      Accept: application/json
+      - Content-Type: application/json
+      - Accept: application/json
   - name: ConnectHear Login API # Monitoring the login API
     url: https://app.connecthear.org/api/v1/customer/login
     method: POST
@@ -40,8 +40,8 @@ sites:
     expectedStatusCodes: [200, 401, 422] # 200 for success, 401 for invalid credentials, 422 for validation errors
     check: "http"
     headers:
-      Content-Type: application/json
-      Accept: application/json
+      - Content-Type: application/json
+      - Accept: application/json
   - name: ConnectHear Google Login API # Monitoring the Google Login API
     url: https://app.connecthear.org/api/v1/customer/google-login
     method: POST
@@ -54,8 +54,8 @@ sites:
     expectedStatusCodes: [200, 422] # 200 for successful login, 422 for validation errors
     check: "http"
     headers:
-      Content-Type: application/json
-      Accept: application/json  
+      - Content-Type: application/json
+      - Accept: application/json
   - name: ConnectHear Forgot Password API # Monitoring the Forgot Password API
     url: https://app.connecthear.org/api/v1/customer/forgot-password
     method: POST
@@ -66,8 +66,8 @@ sites:
     expectedStatusCodes: [200, 422] # 200 for success, 422 for validation errors
     check: "http"
     headers:
-      Content-Type: application/json
-      Accept: application/json  
+      - Content-Type: application/json
+      - Accept: application/json
   - name: ConnectHear Verify Code API # Monitoring the Verify Code API
     url: https://app.connecthear.org/api/v1/customer/verify-code
     method: POST
@@ -81,8 +81,8 @@ sites:
     expectedStatusCodes: [200, 422] # 200 for success, 422 for validation errors
     check: "http"
     headers:
-      Content-Type: application/json
-      Accept: application/json
+      - Content-Type: application/json
+      - Accept: application/json
   - name: ConnectHear Verify SMS Code API # Monitoring the Verify SMS Code API
     url: https://app.connecthear.org/api/v1/customer/verify-sms-code
     method: POST
@@ -96,13 +96,14 @@ sites:
     expectedStatusCodes: [200, 422] # 200 for success, 422 for validation errors or invalid OTP
     check: "http"
     headers:
-      Content-Type: application/json
-      Accept: application/json
+      - Content-Type: application/json
+      - Accept: application/json
   - name: ConnectHear Reset Password API # Monitoring the Reset Password API
     url: https://app.connecthear.org/api/v1/customer/reset-password
     method: POST
     headers:
-      Content-Type: application/json
+      - Content-Type: application/json
+      - Accept: application/json
     body: '{"email": "user@example.com", "password": "newpassword123", "password_confirmation": "newpassword123"}'
     expectedStatusCodes: [200, 422] # 200 for success, 422 for validation errors
     check: "http"
@@ -110,7 +111,8 @@ sites:
     url: https://app.connecthear.org/api/v1/customer/resend-otp
     method: POST
     headers:
-      Content-Type: application/json
+      - Content-Type: application/json
+      - Accept: application/json
     body: '{"email": "user@example.com"}'
     expectedStatusCodes: [200, 422] # 200 for success, 422 for validation errors
     check: "http"
