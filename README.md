@@ -1,6 +1,6 @@
 # [📈 Live Status](https://ConnectHear.github.io/v1-app-uptime): <!--live status--> **🟧 Partial outage**
 
-This repository contains the uptime monitor and status page for [ConnectHear Application 1.0](connecthear.org).
+This repository contains the uptime monitor and status page for the ConnectHear Application v1.0.
 
 [![Uptime CI](https://github.com/ConnectHear/v1-app-uptime/workflows/Uptime%20CI/badge.svg)](https://github.com/ConnectHear/v1-app-uptime/actions?query=workflow%3A%22Uptime+CI%22)
 [![Response Time CI](https://github.com/ConnectHear/v1-app-uptime/workflows/Response%20Time%20CI/badge.svg)](https://github.com/ConnectHear/v1-app-uptime/actions?query=workflow%3A%22Response+Time+CI%22)
