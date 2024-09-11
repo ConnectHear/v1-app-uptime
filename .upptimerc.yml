@@ -18,7 +18,7 @@ sites:
   - name: ConnectHear Sign-Up API
     url: https://app.connecthear.org/api/v1/customer/sign-up
     method: POST
-    body: '{"name": "Test User", "email": "testuser@example.com", "password": "password1234","date_of_birth": "1990-01-01","mobile_number": "1234567890","gender": "Male","latitude": "25.276987","longitude": "55.296249","code": "TESTCODE"}'
+    body: '{"name": "Test User", "email": "testuser@example.com", "password": "password1234","date_of_birth": "1990-01-01","mobile_number": "1234567890","gender": "Male","latitude": "25.276987","longitude": "55.296249","code": ""}'
     expectedStatusCodes:
       - 200
       - 201
