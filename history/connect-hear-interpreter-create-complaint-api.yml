@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/interpreter/create-complaint
 status: down
 code: 500
-responseTime: 105
-lastUpdated: 2024-09-11T11:29:18.094Z
+responseTime: 64
+lastUpdated: 2024-09-11T11:41:58.475Z
 startTime: 2024-09-11T11:29:17.858Z
 generator: Upptime <https://github.com/upptime/upptime>
