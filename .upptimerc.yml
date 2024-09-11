@@ -215,16 +215,17 @@ sites:
   #   check: "https"
   #   headers:
   #     - "Authorization: Bearer your_access_token"
-  - name: ConnectHear Update Profile API
-    url: https://app.connecthear.org/api/v1/customer/update-profile
-    method: POST
-    body: '{"name": "Test User", "date_of_birth": "1990-01-01", "gender": "Male", "mobile_number": "1234567890", "avatar": "path/to/avatar.png"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
+  # - name: Customer Update Profile API
+  #   url: https://app.connecthear.org/api/v1/customer/update-profile
+  #   method: POST
+  #   body: '{"name": "Test User", "date_of_birth": "1990-01-01", "gender": "Male", "mobile_number": "1234567890", "avatar": "base64_encoded_image_data"}'
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Content-Type: application/json"
+  #     - "Authorization: Bearer your_access_token"
   # - name: Customer Subscription API
   #   url: https://app.connecthear.org/api/v1/customer/make-subscription
   #   method: POST
