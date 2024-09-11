@@ -36,7 +36,7 @@ sites:
       - 422
     check: "http"
     headers:
-      - Content-Type: application/json
+      - "Content-Type: application/json"
   - name: ConnectHear Google Login API # Monitoring the Google Login API
     url: https://app.connecthear.org/api/v1/customer/google-login
     method: POST
@@ -46,7 +46,7 @@ sites:
       - 422
     check: "http"
     headers:
-      - Content-Type: application/json
+      - "Content-Type: application/json"
   - name: ConnectHear Forgot Password API # Monitoring the Forgot Password API
     url: https://app.connecthear.org/api/v1/customer/forgot-password
     method: POST
@@ -56,7 +56,7 @@ sites:
       - 422
     check: "http"
     headers:
-      - Content-Type: application/json
+      - "Content-Type: application/json"
   - name: ConnectHear Verify Code API # Monitoring the Verify Code API
     url: https://app.connecthear.org/api/v1/customer/verify-code
     method: POST
@@ -66,7 +66,7 @@ sites:
       - 422
     check: "http"
     headers:
-      - Content-Type: application/json
+      - "Content-Type: application/json"
   - name: ConnectHear Verify SMS Code API # Monitoring the Verify SMS Code API
     url: https://app.connecthear.org/api/v1/customer/verify-sms-code
     method: POST
@@ -76,7 +76,7 @@ sites:
       - 422
     check: "http"
     headers:
-      - Content-Type: application/json
+      - "Content-Type: application/json"
   - name: ConnectHear Reset Password API # Monitoring the Reset Password API
     url: https://app.connecthear.org/api/v1/customer/reset-password
     method: POST
