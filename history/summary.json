@@ -41,18 +41,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/app.connecthear.org.ico",
     "slug": "customer-google-login-api",
     "status": "down",
-    "uptime": "99.97%",
-    "uptimeDay": "99.97%",
-    "uptimeWeek": "99.97%",
-    "uptimeMonth": "99.97%",
-    "uptimeYear": "99.97%",
+    "uptime": "98.73%",
+    "uptimeDay": "98.73%",
+    "uptimeWeek": "98.73%",
+    "uptimeMonth": "98.73%",
+    "uptimeYear": "98.73%",
     "time": 275,
     "timeDay": 275,
     "timeWeek": 275,
     "timeMonth": 275,
     "timeYear": 275,
     "dailyMinutesDown": {
-      "2024-09-12": 0
+      "2024-09-12": 17
     }
   },
   {
@@ -61,18 +61,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/app.connecthear.org.ico",
     "slug": "customer-forgot-password-api",
     "status": "down",
-    "uptime": "67.74%",
-    "uptimeDay": "67.74%",
-    "uptimeWeek": "67.74%",
-    "uptimeMonth": "67.74%",
-    "uptimeYear": "67.74%",
+    "uptime": "65.66%",
+    "uptimeDay": "65.66%",
+    "uptimeWeek": "65.66%",
+    "uptimeMonth": "65.66%",
+    "uptimeYear": "65.66%",
     "time": 342,
     "timeDay": 342,
     "timeWeek": 342,
     "timeMonth": 342,
     "timeYear": 342,
     "dailyMinutesDown": {
-      "2024-09-12": 57,
+      "2024-09-12": 91,
       "2024-09-11": 368
     }
   },
@@ -136,18 +136,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/app.connecthear.org.ico",
     "slug": "customer-resend-otp-api",
     "status": "down",
-    "uptime": "99.95%",
-    "uptimeDay": "99.95%",
-    "uptimeWeek": "99.95%",
-    "uptimeMonth": "99.95%",
-    "uptimeYear": "99.95%",
+    "uptime": "97.48%",
+    "uptimeDay": "97.48%",
+    "uptimeWeek": "97.48%",
+    "uptimeMonth": "97.48%",
+    "uptimeYear": "97.48%",
     "time": 98,
     "timeDay": 98,
     "timeWeek": 98,
     "timeMonth": 98,
     "timeYear": 98,
     "dailyMinutesDown": {
-      "2024-09-12": 0
+      "2024-09-12": 34
     }
   },
   {
@@ -156,18 +156,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/app.connecthear.org.ico",
     "slug": "customer-get-profile-api",
     "status": "down",
-    "uptime": "0.01%",
-    "uptimeDay": "0.01%",
-    "uptimeWeek": "0.01%",
-    "uptimeMonth": "0.01%",
-    "uptimeYear": "0.01%",
+    "uptime": "0.00%",
+    "uptimeDay": "0.00%",
+    "uptimeWeek": "0.00%",
+    "uptimeMonth": "0.00%",
+    "uptimeYear": "0.00%",
     "time": 294,
     "timeDay": 294,
     "timeWeek": 294,
     "timeMonth": 294,
     "timeYear": 294,
     "dailyMinutesDown": {
-      "2024-09-12": 235
+      "2024-09-12": 251
     }
   },
   {
@@ -175,19 +175,19 @@
     "url": "https://app.connecthear.org/api/v1/interpreter/sign-up",
     "icon": "https://icons.duckduckgo.com/ip3/app.connecthear.org.ico",
     "slug": "interpreter-sign-up-api",
-    "status": "down",
-    "uptime": "99.98%",
-    "uptimeDay": "99.98%",
-    "uptimeWeek": "99.98%",
-    "uptimeMonth": "99.98%",
-    "uptimeYear": "99.98%",
-    "time": 109,
-    "timeDay": 109,
-    "timeWeek": 109,
-    "timeMonth": 109,
-    "timeYear": 109,
+    "status": "up",
+    "uptime": "98.75%",
+    "uptimeDay": "98.75%",
+    "uptimeWeek": "98.75%",
+    "uptimeMonth": "98.75%",
+    "uptimeYear": "98.75%",
+    "time": 108,
+    "timeDay": 108,
+    "timeWeek": 108,
+    "timeMonth": 108,
+    "timeYear": 108,
     "dailyMinutesDown": {
-      "2024-09-12": 0
+      "2024-09-12": 17
     }
   },
   {
@@ -250,18 +250,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/app.connecthear.org.ico",
     "slug": "interpreter-forgot-password-api",
     "status": "down",
-    "uptime": "67.23%",
-    "uptimeDay": "67.23%",
-    "uptimeWeek": "67.23%",
-    "uptimeMonth": "67.23%",
-    "uptimeYear": "67.23%",
+    "uptime": "66.40%",
+    "uptimeDay": "66.40%",
+    "uptimeWeek": "66.40%",
+    "uptimeMonth": "66.40%",
+    "uptimeYear": "66.40%",
     "time": 257,
     "timeDay": 257,
     "timeWeek": 257,
     "timeMonth": 257,
     "timeYear": 257,
     "dailyMinutesDown": {
-      "2024-09-12": 57,
+      "2024-09-12": 74,
       "2024-09-11": 375
     }
   },
