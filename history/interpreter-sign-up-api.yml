@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/interpreter/sign-up
-status: up
-code: 422
-responseTime: 62
-lastUpdated: 2024-09-12T06:44:52.795Z
+status: down
+code: 500
+responseTime: 159
+lastUpdated: 2024-09-12T10:19:57.792Z
 startTime: 2024-09-11T12:19:57.628Z
 generator: Upptime <https://github.com/upptime/upptime>
