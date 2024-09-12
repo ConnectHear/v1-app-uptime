@@ -85,15 +85,15 @@ sites:
       - 422
     check: "http"
   - name: Customer Get Profile API # Monitoring the Get Profile API
-  url: https://app.connecthear.org/api/v1/customer/get-profile
-  method: GET
-  headers:
-    - "Content-Type: application/jso;charset=UTF-8n"
-    - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImYzOTU2NzQxMmRmNDc5NTEyZjg1MDVlNTg5NWE4NjFjM2VlYjM2YTNhNzk1NzFhNWMzMTk2YTBlODE4ZjRmYjc1NzU0NTc5NWE0NTRlNjg3In0.eyJhdWQiOiIxIiwianRpIjoiZjM5NTY3NDEyZGY0Nzk1MTJmODUwNWU1ODk1YTg2MWMzZWViMzZhM2E3OTU3MWE1YzMxOTZhMGU4MThmNGZiNzU3NTQ1Nzk1YTQ1NGU2ODciLCJpYXQiOjE3MjYxMjE2ODAsIm5iZiI6MTcyNjEyMTY4MCwiZXhwIjoxNzU3NjU3NjgwLCJzdWIiOiIxNDY2MyIsInNjb3BlcyI6W119.lP6RbNpKDPofX6BAINK-wK2mSNLmSwchibHHXqnlWqIV0uOaGqkUKMu84rc1bwsjFHb-ePZKlncab6qeLUwNCMMzqGcUNouSPvlrxZq16dLXQdAVLTUKZpFpKZoJl-rjCzNvJ8sU-uzYjARCftQcmLocoUloQ4fubMAPQ4RH8bSpC2lsAr7CwX2WRIS_0us67N_xNV6tHCjW7akoxviba6kmHU98oIoAU5ZI6SOvphhT4WI6RExcYymgEPWdkzxOLYCdpFOv69CGVS3sfo2ipTlirRSlmD6ek6BKATmbJfs1FtKSXACG8JwQ930hPV2lf51OlPaaPAyLtUhGEp4BmNB_6t8fdkFS0Pc422dzfP8G3l1tpnHHjCRPZ3C5pyB-vZa-Tz92L_wEAlCFvlLQy8fKEjq4ROyph0PB5EY8xBZ57PuusCOxjJqtBfoVMxFL0iz_O546pb4ufAV-qRxElehQFUztzW54pGQFBdNWW9oDmXg6DFI3OjViTwkS_PAPgQzeOwLoF09IZxZ4I8clfZ6fdk-jSrZsztkuVUm5g0vrlGfYCxsnsW44cJP4lwqWxUq9F5TFK6MAdY6oMA-YolvAjnXKqWwViPJvdAckeBpiilKGAqqLq58pta0yVQAOVb-dgMyTeCTxnhF_hhczsk9iiSSpMoiPzBVwxooHDVM"  # Replace YOUR_ACCESS_TOKEN with a valid token or use a secret
-  expectedStatusCodes:
-    - 200
-    - 403  # Account disabled by user or company
-  check: "http"
+    url: https://app.connecthear.org/api/v1/customer/get-profile
+    method: GET
+    headers:
+      - "Content-Type: application/jso;charset=UTF-8n"
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImYzOTU2NzQxMmRmNDc5NTEyZjg1MDVlNTg5NWE4NjFjM2VlYjM2YTNhNzk1NzFhNWMzMTk2YTBlODE4ZjRmYjc1NzU0NTc5NWE0NTRlNjg3In0.eyJhdWQiOiIxIiwianRpIjoiZjM5NTY3NDEyZGY0Nzk1MTJmODUwNWU1ODk1YTg2MWMzZWViMzZhM2E3OTU3MWE1YzMxOTZhMGU4MThmNGZiNzU3NTQ1Nzk1YTQ1NGU2ODciLCJpYXQiOjE3MjYxMjE2ODAsIm5iZiI6MTcyNjEyMTY4MCwiZXhwIjoxNzU3NjU3NjgwLCJzdWIiOiIxNDY2MyIsInNjb3BlcyI6W119.lP6RbNpKDPofX6BAINK-wK2mSNLmSwchibHHXqnlWqIV0uOaGqkUKMu84rc1bwsjFHb-ePZKlncab6qeLUwNCMMzqGcUNouSPvlrxZq16dLXQdAVLTUKZpFpKZoJl-rjCzNvJ8sU-uzYjARCftQcmLocoUloQ4fubMAPQ4RH8bSpC2lsAr7CwX2WRIS_0us67N_xNV6tHCjW7akoxviba6kmHU98oIoAU5ZI6SOvphhT4WI6RExcYymgEPWdkzxOLYCdpFOv69CGVS3sfo2ipTlirRSlmD6ek6BKATmbJfs1FtKSXACG8JwQ930hPV2lf51OlPaaPAyLtUhGEp4BmNB_6t8fdkFS0Pc422dzfP8G3l1tpnHHjCRPZ3C5pyB-vZa-Tz92L_wEAlCFvlLQy8fKEjq4ROyph0PB5EY8xBZ57PuusCOxjJqtBfoVMxFL0iz_O546pb4ufAV-qRxElehQFUztzW54pGQFBdNWW9oDmXg6DFI3OjViTwkS_PAPgQzeOwLoF09IZxZ4I8clfZ6fdk-jSrZsztkuVUm5g0vrlGfYCxsnsW44cJP4lwqWxUq9F5TFK6MAdY6oMA-YolvAjnXKqWwViPJvdAckeBpiilKGAqqLq58pta0yVQAOVb-dgMyTeCTxnhF_hhczsk9iiSSpMoiPzBVwxooHDVM"  # Replace YOUR_ACCESS_TOKEN with a valid token or use a secret
+    expectedStatusCodes:
+      - 200
+      - 403  # Account disabled by user or company
+    check: "http"
 
   # - name: Customer Logout API # Monitoring the Logout API
   #   url: https://app.connecthear.org/api/v1/customer/logout
