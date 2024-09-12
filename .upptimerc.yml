@@ -5,7 +5,7 @@ sites:
   - name: Customer Sign-Up API
     url: https://app.connecthear.org/api/v1/customer/sign-up
     method: POST
-    body: '{"name": "Test User", "email": "testuser@example.com", "password": "password1234","date_of_birth": "1990-01-01","mobile_number": "1234567890","gender": "Male","latitude": "25.276987","longitude": "55.296249","code": ""}'
+    body: '{"name": "Test User", "email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment","date_of_birth": "1990-01-01","mobile_number": "1234567890","gender": "Male","latitude": "25.276987","longitude": "55.296249","code": ""}'
     expectedStatusCodes:
       - 200
       - 201
@@ -16,7 +16,7 @@ sites:
   - name: Customer Login API # Monitoring the login API
     url: https://app.connecthear.org/api/v1/customer/login
     method: POST
-    body: '{"email": "testuser@example.com", "password": "password1234"}'
+    body: '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment"}'
     expectedStatusCodes:
       - 200
       - 401
@@ -27,7 +27,7 @@ sites:
   - name: Customer Google Login API # Monitoring the Google Login API
     url: https://app.connecthear.org/api/v1/customer/google-login
     method: POST
-    body: '{"name": "Test User", "email": "testuser@example.com", "google_id": "google-test-id-123"}'
+    body: '{"name": "Test User", "email": "uptime@connecthear.org", "google_id": "google-test-id-123"}'
     expectedStatusCodes:
       - 200
       - 422
@@ -37,7 +37,7 @@ sites:
   - name: Customer Forgot Password API # Monitoring the Forgot Password API
     url: https://app.connecthear.org/api/v1/customer/forgot-password
     method: POST
-    body: '{"email": "testuser@example.com"}'
+    body: '{"email": "uptime@connecthear.org"}'
     expectedStatusCodes:
       - 200
       - 422
@@ -47,7 +47,7 @@ sites:
   - name: Customer Code Verfication API # Monitoring the Verify Code API
     url: https://app.connecthear.org/api/v1/customer/verify-code
     method: POST
-    body: '{"email": "testuser@example.com", "verification_code": "1234", "password": "newpassword", "password_confirmation": "newpassword"}'
+    body: '{"email": "uptime@connecthear.org", "verification_code": "1234", "password": "connecthearapplicationdevelopment", "password_confirmation": "connecthearapplicationdevelopment"}'
     expectedStatusCodes:
       - 200
       - 422
@@ -57,7 +57,7 @@ sites:
   - name: Customer sms Code Verification API # Monitoring the Verify SMS Code API
     url: https://app.connecthear.org/api/v1/customer/verify-sms-code
     method: POST
-    body: '{"email": "testuser@example.com", "password": "strongpassword", "mobile_number": "1234567890", "verification_code": "1234"}'
+    body: '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "mobile_number": "1234567890", "verification_code": "1234"}'
     expectedStatusCodes:
       - 200
       - 422
@@ -69,7 +69,7 @@ sites:
     method: POST
     headers:
       - "Content-Type: application/json"
-    body: '{"email": "user@example.com", "password": "newpassword123", "password_confirmation": "newpassword123"}'
+    body: '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "password_confirmation": "connecthearapplicationdevelopment"}'
     expectedStatusCodes:
       - 200
       - 422
@@ -79,7 +79,7 @@ sites:
     method: POST
     headers:
       - "Content-Type: application/json"
-    body: '{"email": "user@example.com"}'
+    body: '{"email": "uptime@connecthear.org"}'
     expectedStatusCodes:
       - 200
       - 422
@@ -260,7 +260,7 @@ sites:
   - name: Interpreter Sign-Up API
     url: https://app.connecthear.org/api/v1/interpreter/sign-up
     method: POST
-    body: '{"name": "John Doe", "email": "john.doe@example.com", "password": "your_password", "mobile_number": "1234567890", "gender": "male", "date_of_birth": "1990-01-01", "occupation": "Interpreter", "address": "123 Main St", "latitude": "34.0522", "longitude": "-118.2437", "avatar": "base64_encoded_image", "cnic": "base64_encoded_cnic"}'
+    body: '{"name": "John Doe", "email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "mobile_number": "1234567890", "gender": "male", "date_of_birth": "1990-01-01", "occupation": "Interpreter", "address": "123 Main St", "latitude": "34.0522", "longitude": "-118.2437", "avatar": "base64_encoded_image", "cnic": "base64_encoded_cnic"}'
     expectedStatusCodes:
       - 200
       - 422
@@ -270,7 +270,7 @@ sites:
   - name: Interpreter Verify SMS Code API
     url: https://app.connecthear.org/api/v1/interpreter/verify-sms-code
     method: POST
-    body: '{"email": "john.doe@example.com", "password": "your_password", "mobile_number": "1234567890", "otp": "1234"}'
+    body: '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "mobile_number": "1234567890", "otp": "1234"}'
     expectedStatusCodes:
       - 200
       - 422
@@ -280,7 +280,7 @@ sites:
   - name: Interpreter Login API
     url: https://app.connecthear.org/api/v1/interpreter/login
     method: POST
-    body: '{"email": "john.doe@example.com", "password": "your_password"}'
+    body: '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment"}'
     expectedStatusCodes:
       - 200
       - 422
@@ -290,7 +290,7 @@ sites:
   - name: Interpreter Google Login API
     url: https://app.connecthear.org/api/v1/interpreter/google-login
     method: POST
-    body: '{"name": "John Doe", "email": "john.doe@example.com", "google_id": "your_google_id"}'
+    body: '{"name": "John Doe", "email": "uptime@connecthear.org", "google_id": "your_google_id"}'
     expectedStatusCodes:
       - 200
       - 422
@@ -300,7 +300,7 @@ sites:
   - name: Interpreter Forgot Password API
     url: https://app.connecthear.org/api/v1/interpreter/forgot-password
     method: POST
-    body: '{"email": "john.doe@example.com"}'
+    body: '{"email": "uptime@connecthear.org"}'
     expectedStatusCodes:
       - 200
       - 422
@@ -310,7 +310,7 @@ sites:
   - name: Interpreter Verify Code API
     url: https://app.connecthear.org/api/v1/interpreter/verify-code
     method: POST
-    body: '{"email": "john.doe@example.com", "verification_code": "1234"}'
+    body: '{"email": "uptime@connecthear.org", "verification_code": "1234"}'
     expectedStatusCodes:
       - 200
       - 422
@@ -320,7 +320,7 @@ sites:
   - name: Interpreter Reset Password API
     url: https://app.connecthear.org/api/v1/interpreter/reset-password
     method: POST
-    body: '{"email": "john.doe@example.com", "password": "new_password", "password_confirmation": "new_password"}'
+    body: '{"email": "uptime@connecthear.org", "password": "new_password", "password_confirmation": "new_password"}'
     expectedStatusCodes:
       - 200
       - 422
