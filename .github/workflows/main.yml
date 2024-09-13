@@ -8,7 +8,6 @@ on:
   schedule:
     - cron: "*/5 * * * *"  # Runs every 5 minutes
 
-
 jobs:
   monitor:
     runs-on: ubuntu-latest
@@ -28,13 +27,14 @@ jobs:
         jq -r '.response.detail.token_detail.access_token')
         echo "TOKEN=$TOKEN" >> $GITHUB_ENV
 
-    # Step 3: Replace {{TOKEN}} with the actual token in .upptimerc.yml
+    # Step 3: Replace {{TOKEN}} or existing token in .upptimerc.yml
     - name: Replace TOKEN in .upptimerc.yml
       run: |
-        sed -i "s/Bearer \({{TOKEN}}\|[a-zA-Z0-9._-]*\)/Bearer ${TOKEN}/g" ./.upptimerc.yml
+        # Use sed to replace either {{TOKEN}} or an existing Bearer token with the new token
+        sed -i "s/Bearer \({{TOKEN}}\|[a-zA-Z0-9._-]\+\)/Bearer ${TOKEN}/g" ./.upptimerc.yml
         echo "Token replacement complete."
         
-    # Step 4: Commit the changes to .upptimerc.yml with the injected token
+    # Step 4: Commit and Push .upptimerc.yml Changes
     - name: Commit and Push .upptimerc.yml Changes
       run: |
         git config --global user.email "github-actions@github.com"
@@ -43,4 +43,3 @@ jobs:
         git commit -m "Update .upptimerc.yml with dynamic token"
         git pull origin master --rebase  # Pull the latest changes and rebase to avoid conflicts
         git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git master
-
