@@ -2,7 +2,7 @@ name: Update Access Token
 
 on:
   schedule:
-    - cron: "0 */6 * * *"  # Runs every 6 hours
+    - cron: '*/5 * * * *'  # Runs every 6 hours
   workflow_dispatch:
 
 jobs:
@@ -28,6 +28,6 @@ jobs:
       run: |
         git config --global user.email "github-actions@github.com"
         git config --global user.name "GitHub Actions"
-        git add upptimerc.yml
+        git add .upptimerc.yml
         git commit -m "Update access token for Get Profile API"
         git push
