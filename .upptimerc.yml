@@ -3,7 +3,7 @@ repo: v1-app-uptime # The name of this repository
 
 on:
   workflow_run:
-    workflows: ["Main Workflow"]  # This references your `main.yml` workflow name
+    workflows: ["Custom Uptime Workflow"]  # This references your `main.yml` workflow name
     types:
       - completed
 
