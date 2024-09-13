@@ -2,30 +2,40 @@ name: Update Access Token
 
 on:
   repository_dispatch:
-    types: [trigger_update_token]
-  workflow_dispatch:
+    types: [trigger_update_token]  # Manually trigger the workflow via GitHub API
+  workflow_dispatch:  # Allows manual triggering via GitHub UI
 
 jobs:
   update-token:
     runs-on: ubuntu-latest
 
     steps:
+    # Step 1: Checkout the repository
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    # Step 2: Get the access token from the Login API
     - name: Get access token from Login API
       run: |
         TOKEN=$(curl -X POST https://app.connecthear.org/api/v1/customer/login \
         -H "Content-Type: application/json" \
         -d '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment"}' | \
         jq -r '.response.detail.token_detail.access_token')
-        
+
+        # Store the token in the GitHub environment variable for later use
         echo "TOKEN=$TOKEN" >> $GITHUB_ENV
 
+    # Step 3: Update upptimerc.yml with the new token
     - name: Update upptimerc.yml with new token
       run: |
+        # Replace the {{ACCESS_TOKEN}} placeholder with the actual token
         sed -i "s/{{ACCESS_TOKEN}}/$TOKEN/g" ./.upptimerc.yml
 
+    # Step 4: Print upptimerc.yml to verify the token has been updated (Optional)
+    - name: Debug updated upptimerc.yml
+      run: cat ./.upptimerc.yml
+
+    # Step 5: Commit and push updated upptimerc.yml to the repository
     - name: Commit and push updated upptimerc.yml
       run: |
         git config --global user.email "github-actions@github.com"
