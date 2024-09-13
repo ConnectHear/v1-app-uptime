@@ -21,15 +21,27 @@ jobs:
         jq -r '.response.detail.token_detail.access_token')
         
         echo "TOKEN=$TOKEN" >> $GITHUB_ENV
+
+        echo "Extracted Access Token: $TOKEN"  # Debug: log extracted token
         
+        if [ -z "$TOKEN" ]; then
+          echo "Error: Failed to retrieve the access token!"
+          exit 1
+        fi
         
     - name: Debug Output Toke
       run: |
         echo "Generated Token: $TOKEN"
 
+    - name: Debug `.upptimerc.yml` before replacement
+      run: |
+        echo "Displaying .upptimerc.yml before token replacement:"
+        cat ./.upptimerc.yml
+
     - name: Update upptimerc.yml with new token
       run: |
         sed -i "s/Bearer \({{ACCESS_TOKEN}}\|[a-zA-Z0-9._-]*\)/Bearer ${TOKEN}/g" ./.upptimerc.yml  # Replacing placeholder or existing token with new token
+        echo "Token replacement complete."
         cat ./.upptimerc.yml | grep Bearer  # Debugging step to verify the replacement
 
     - name: Commit and push updated upptimerc.yml
