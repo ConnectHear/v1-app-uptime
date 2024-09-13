@@ -3,7 +3,10 @@ name: Update Access Token
 on:
   repository_dispatch:
     types: [trigger_update_token]
-  workflow_dispatch:
+    
+  workflow_dispatch:   # This allows manual triggering
+  schedule:            # If you have scheduled runs
+    - cron: '*/5 * * * *'
 
 jobs:
   update-token:
