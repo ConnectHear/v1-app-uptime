@@ -3,8 +3,7 @@ name: Update Access Token
 on:
   repository_dispatch:
     types: [trigger_update_token]
-    
-  workflow_dispatch:   # This allows manual triggering
+  workflow_dispatch:
 
 jobs:
   update-token:
@@ -14,41 +13,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Get access token from Login API
-      run: |
-        TOKEN=$(curl -X POST https://app.connecthear.org/api/v1/customer/login \
-        -H "Content-Type: application/json" \
-        -d '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment"}' | \
-        jq -r '.response.detail.token_detail.access_token')
-        
-        echo "TOKEN=$TOKEN" >> $GITHUB_ENV
-
-        echo "Extracted Access Token: $TOKEN"  # Debug: log extracted token
-        
-        if [ -z "$TOKEN" ]; then
-          echo "Error: Failed to retrieve the access token!"
-          exit 1
-        fi
-        
-    - name: Debug Output Toke
-      run: |
-        echo "Generated Token: $TOKEN"
-
-    - name: Debug `.upptimerc.yml` before replacement
-      run: |
-        echo "Displaying .upptimerc.yml before token replacement:"
-        cat ./.upptimerc.yml
-
-    - name: Update upptimerc.yml with new token
-      run: |
-        sed -i "s/Bearer \({{ACCESS_TOKEN}}\|[a-zA-Z0-9._-]*\)/Bearer ${TOKEN}/g" ./.upptimerc.yml  # Replacing placeholder or existing token with new token
-        echo "Token replacement complete."
-        cat ./.upptimerc.yml | grep Bearer  # Debugging step to verify the replacement
-
     - name: Commit and push updated upptimerc.yml
       run: |
         git config --global user.email "github-actions@github.com"
         git config --global user.name "GitHub Actions"
         git add .upptimerc.yml
-        git commit -m "Update access token for Get Profile API" || echo "No changes to commit"
+        git commit -m "Update access token for API requests" || echo "No changes to commit"
         git push
