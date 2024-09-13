@@ -90,7 +90,7 @@ sites:
     method: GET
     headers:
       - "Content-Type: application/json;charset=UTF-8"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
     expectedStatusCodes:
       - 200
       - 403  # Account disabled by user or company
@@ -104,7 +104,7 @@ sites:
     method: POST
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
     expectedStatusCodes:
       - 200
       - 422
@@ -114,7 +114,7 @@ sites:
     method: POST
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
     expectedStatusCodes:
       - 200
       - 422
@@ -124,7 +124,7 @@ sites:
     method: POST
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
     body: '{"device_token": "your_device_token_here", "device_type": "your_device_type_here"}'
     expectedStatusCodes:
       - 200
@@ -135,7 +135,7 @@ sites:
     method: POST
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
     body: '{"current_password": "your_current_password_here", "password": "your_new_password_here", "password_confirmation": "your_new_password_here"}'
     expectedStatusCodes:
       - 200
@@ -151,7 +151,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
   - name: Customer Add Reviews API
     url: https://app.connecthear.org/api/v1/customer/add-reviews
     method: POST
@@ -162,7 +162,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
   - name: Customer Complaint API
     url: https://app.connecthear.org/api/v1/customer/create-complaint
     method: POST
@@ -173,7 +173,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
   - name: Customer Create Video Session API
     url: https://app.connecthear.org/api/v1/customer/create-video-session
     method: POST
@@ -185,7 +185,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
   - name: Customer Create Call API
     url: https://app.connecthear.org/api/v1/customer/create-call
     method: POST
@@ -196,7 +196,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
   - name: ConnectHear Get Reviews API
     url: https://app.connecthear.org/api/v1/customer/get-reviews
     method: GET
@@ -205,7 +205,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
   - name: Customer Plans API
     url: https://app.connecthear.org/api/v1/customer/get-plans
     method: GET
@@ -214,7 +214,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
   - name: Customer Update Profile API
     url: https://app.connecthear.org/api/v1/customer/update-profile
     method: POST
@@ -225,7 +225,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
   - name: Customer Subscription API
     url: https://app.connecthear.org/api/v1/customer/make-subscription
     method: POST
@@ -236,7 +236,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
   - name: Customer Update Monitoring Session Status API
     url: https://app.connecthear.org/api/v1/customer/update-monitoring-session-status
     method: POST
@@ -247,7 +247,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
   - name: Customer Get Call Logs API
     url: https://app.connecthear.org/api/v1/customer/get-call-logs
     method: GET
@@ -256,13 +256,13 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}" 
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
     # - name: Customer Logout API # Monitoring the Logout API
     # url: https://app.connecthear.org/api/v1/customer/logout
     # method: POST
     # headers:
     #   - "Content-Type: application/json"
-    #   - "Authorization: Bearer {{TOKEN}}" 
+    #   - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE{{TOKEN}}" 
     # expectedStatusCodes:
     #   - 200
     #   - 422
@@ -347,7 +347,7 @@ sites:
   #   body: '{"avatar": "base64_encoded_avatar", "cnic": "base64_encoded_cnic"}'
   #   headers:
   #     - "Content-Type: application/json"
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   # - name: Interpreter Update Device Token API
   #   url: https://app.connecthear.org/api/v1/interpreter/update-device-token
   #   method: POST
@@ -358,7 +358,7 @@ sites:
   #   body: '{"device_token": "your_device_token", "device_type": "your_device_type"}'
   #   headers:
   #     - "Content-Type: application/json"
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   # - name: Interpreter Logout API
   #   url: https://app.connecthear.org/api/v1/interpreter/logout
   #   method: POST
@@ -368,7 +368,7 @@ sites:
   #   check: "https"
   #   body: {}
   #   headers:
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   # - name: Interpreter Get Profile API
   #   url: https://app.connecthear.org/api/v1/interpreter/get-profile
   #   method: GET
@@ -378,7 +378,7 @@ sites:
   #   check: "https"
   #   body: {}
   #   headers:
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   # - name: Interpreter Change Password API
   #   url: https://app.connecthear.org/api/v1/interpreter/change-password
   #   method: POST
@@ -388,7 +388,7 @@ sites:
   #     - 422
   #   check: "https"
   #   headers:
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   #     - "Content-Type: application/json"
 
   # - name: Interpreter Create Complaint API
@@ -401,7 +401,7 @@ sites:
   #   check: "https"
   #   headers:
   #     - "Content-Type: application/json"
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   # - name: Interpreter Update Archive ID API
   #   url: https://app.connecthear.org/api/v1/interpreter/update-archive-id
   #   method: POST
@@ -411,7 +411,7 @@ sites:
   #     - 422
   #   check: "https"
   #   headers:
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   #     - "Content-Type: application/json"
   # - name: Interpreter Get Reviews API
   #   url: https://app.connecthear.org/api/v1/interpreter/get-reviews
@@ -421,7 +421,7 @@ sites:
   #     - 422
   #   check: "https"
   #   headers:
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   #     - "Content-Type: application/json"
   # - name: Interpreter Update Profile API
   #   url: https://app.connecthear.org/api/v1/interpreter/update-profile
@@ -432,7 +432,7 @@ sites:
   #     - 422
   #   check: "https"
   #   headers:
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   #     - "Content-Type: application/json"
 
   # - name: Interpreter Update Monitoring Session Status API
@@ -444,7 +444,7 @@ sites:
   #     - 422
   #   check: "https"
   #   headers:
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   #     - "Content-Type: application/json"
 
   # - name: Interpreter Add Reviews API
@@ -456,7 +456,7 @@ sites:
   #     - 422
   #   check: "https"
   #   headers:
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   #     - "Content-Type: application/json"
 
   # - name: Interpreter Update Latitude and Longitude API
@@ -468,7 +468,7 @@ sites:
   #     - 422
   #   check: "https"
   #   headers:
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   #     - "Content-Type: application/json"
   # - name: Interpreter Get Call Logs API
   #   url: https://app.connecthear.org/api/v1/interpreter/get-call-logs
@@ -478,7 +478,7 @@ sites:
   #     - 422
   #   check: "https"
   #   headers:
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   #     - "Content-Type: application/json"
   # - name:  Interpreter Manage Online Status API
   #   url: https://app.connecthear.org/api/v1/interpreter/online-status
@@ -488,7 +488,7 @@ sites:
   #     - 422
   #   check: "https"
   #   headers:
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   #     - "Content-Type: application/json"
   # - name: Interpreter Update Time API
   #   url: https://app.connecthear.org/api/v1/interpreter/update-time
@@ -498,7 +498,7 @@ sites:
   #   - 422
   #   check: "https"
   #   headers:
-  #     - "Authorization: Bearer your_access_token"
+  #     - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjcxNWRmNWFiNzlkZDcyZTQ3YzVlMWY5YjE4Yzg5YjU5Y2IxM2RiNWUyOWEwNmY1NmVmM2RkNTE5ZGI5N2Q3YjU0MmFlMzkxOTI2MDc5ZWM5In0.eyJhdWQiOiIxIiwianRpIjoiNzE1ZGY1YWI3OWRkNzJlNDdjNWUxZjliMThjODliNTljYjEzZGI1ZTI5YTA2ZjU2ZWYzZGQ1MTlkYjk3ZDdiNTQyYWUzOTE5MjYwNzllYzkiLCJpYXQiOjE3MjYyNDI4MzgsIm5iZiI6MTcyNjI0MjgzOCwiZXhwIjoxNzU3Nzc4ODM4LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.5DG_PtH6wcHzhsDEm_LZn7Ai3D-E-5qiB_BEzx20mmmQWAH303yhaQZ4LiZhjvalnvGG93ZxW4jLhIvqWA-bwgBjcTqPKoJax-Epl7Zf1W3VnSwGuWLTcm0TZuFxszL2tOsSRabMcj_nDg-cztjRnMuZE1PkgqL7YsIig7x0NxdFEDmAZ2KWVtmR-KHDwr8Lw-SqdPNLEfBs1JkwSWf4_jFmu7C_eBKuNTzdFJCHiY86VQwOSaSdrxhnIVcX8rU2KdkGJ0uguChydLZNwx6cbPksQq44wS-s-KQIzmq43JM8PlS16v0FwojGu5zL41CxG41CPu_5wut1A3pQ8JIqBAXSOwWh-0uLHP-K4H-124tArzoxDkKw-56FtnFKh6AuSqifl9wepcWZQpVDhfxLuotdKc09j7EGnqdKyHHdRFMN_ELyDfRpMmQj4GB_ADoszHUreIGvhqQ7RUOGSNUyQ_UDc0QgkjckMF5m4CyOlJBMlawqd8E-roWB4lHmg3hIKuPWKElslmBXXBNOAkoAZXhcVgdo33_nyx-IBOy1oroQKeGT_HHxiWcxxn_3au-EIGXRzRFjD2mFsvNt7iME08nVSrx6MWE252wLm4i7dU7nFi7K8ahmbJOHVhUVUK_741K1vW1DWZ7vBkgoJS2BQeSput58Zy5Qhye7fddsPHE"
   #     - "Content-Type: application/json"
 
 status-website:
