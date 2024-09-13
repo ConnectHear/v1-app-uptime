@@ -21,10 +21,18 @@ jobs:
         jq -r '.response.detail.token_detail.access_token')
         
         echo "TOKEN=$TOKEN" >> $GITHUB_ENV
+        
+        
+    - name: Debug Output Toke
+      run: |
+        echo "Generated Token: $TOKEN"
 
     - name: Update upptimerc.yml with new token
       run: |
-        sed -i "s/{{ACCESS_TOKEN}}/$TOKEN/g" ./.upptimerc.yml
+        sed -i "s/{{ACCESS_TOKEN}}/${TOKEN//\//\\/}/g" ./.upptimerc.yml
+
+    - name: Check Updated upptimerc.yml
+      run: cat ./.upptimerc.yml | grep ACCESS_TOKEN
 
     - name: Commit and push updated upptimerc.yml
       run: |
