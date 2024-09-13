@@ -27,7 +27,7 @@ sites:
   - name: Customer Google Login API # Monitoring the Google Login API
     url: https://app.connecthear.org/api/v1/customer/google-login
     method: POST
-    body: '{"name": "Upptime", "email": "uptime@connecthear.org", "google_id": "null"}'
+    body: '{"name": "Upptime", "email": "uptime@connecthear.org", "google_id": "{{ACCESS_TOKEN}}"}'
     expectedStatusCodes:
       - 200
       - 422
@@ -89,7 +89,7 @@ sites:
     method: GET
     headers:
       - "Content-Type: application/json;charset=UTF-8"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
     expectedStatusCodes:
       - 200
       - 403  # Account disabled by user or company
@@ -103,7 +103,7 @@ sites:
     method: POST
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
     expectedStatusCodes:
       - 200
       - 422
@@ -113,7 +113,7 @@ sites:
     method: POST
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
     expectedStatusCodes:
       - 200
       - 422
@@ -123,7 +123,7 @@ sites:
     method: POST
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
     body: '{"device_token": "your_device_token_here", "device_type": "your_device_type_here"}'
     expectedStatusCodes:
       - 200
@@ -134,7 +134,7 @@ sites:
     method: POST
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
     body: '{"current_password": "your_current_password_here", "password": "your_new_password_here", "password_confirmation": "your_new_password_here"}'
     expectedStatusCodes:
       - 200
@@ -150,7 +150,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
   - name: Customer Add Reviews API
     url: https://app.connecthear.org/api/v1/customer/add-reviews
     method: POST
@@ -161,7 +161,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
   - name: Customer Complaint API
     url: https://app.connecthear.org/api/v1/customer/create-complaint
     method: POST
@@ -172,7 +172,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
   - name: Customer Create Video Session API
     url: https://app.connecthear.org/api/v1/customer/create-video-session
     method: POST
@@ -184,7 +184,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
   - name: Customer Create Call API
     url: https://app.connecthear.org/api/v1/customer/create-call
     method: POST
@@ -195,7 +195,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
   - name: ConnectHear Get Reviews API
     url: https://app.connecthear.org/api/v1/customer/get-reviews
     method: GET
@@ -204,7 +204,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
   - name: Customer Plans API
     url: https://app.connecthear.org/api/v1/customer/get-plans
     method: GET
@@ -213,7 +213,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
   - name: Customer Update Profile API
     url: https://app.connecthear.org/api/v1/customer/update-profile
     method: POST
@@ -224,7 +224,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
   - name: Customer Subscription API
     url: https://app.connecthear.org/api/v1/customer/make-subscription
     method: POST
@@ -235,7 +235,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
   - name: Customer Update Monitoring Session Status API
     url: https://app.connecthear.org/api/v1/customer/update-monitoring-session-status
     method: POST
@@ -246,7 +246,7 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
   - name: Customer Get Call Logs API
     url: https://app.connecthear.org/api/v1/customer/get-call-logs
     method: GET
@@ -255,13 +255,13 @@ sites:
     check: "https"
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer null" 
+      - "Authorization: Bearer {{ACCESS_TOKEN}}" 
     # - name: Customer Logout API # Monitoring the Logout API
     # url: https://app.connecthear.org/api/v1/customer/logout
     # method: POST
     # headers:
     #   - "Content-Type: application/json"
-    #   - "Authorization: Bearer null" 
+    #   - "Authorization: Bearer {{ACCESS_TOKEN}}" 
     # expectedStatusCodes:
     #   - 200
     #   - 422
