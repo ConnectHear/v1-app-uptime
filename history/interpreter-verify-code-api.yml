@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/interpreter/verify-code
 status: up
 code: 422
-responseTime: 48
-lastUpdated: 2024-09-13T15:51:40.312Z
+responseTime: 120
+lastUpdated: 2024-09-13T15:57:53.161Z
 startTime: 2024-09-13T14:29:47.708Z
 generator: Upptime <https://github.com/upptime/upptime>
