@@ -41,11 +41,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/app.connecthear.org.ico",
     "slug": "customer-google-login-api",
     "status": "up",
-    "uptime": "98.30%",
+    "uptime": "98.31%",
     "uptimeDay": "100.00%",
-    "uptimeWeek": "98.30%",
-    "uptimeMonth": "98.30%",
-    "uptimeYear": "98.30%",
+    "uptimeWeek": "98.31%",
+    "uptimeMonth": "98.31%",
+    "uptimeYear": "98.31%",
     "time": 264,
     "timeDay": 263,
     "timeWeek": 264,
@@ -60,19 +60,19 @@
     "url": "https://app.connecthear.org/api/v1/customer/forgot-password",
     "icon": "https://icons.duckduckgo.com/ip3/app.connecthear.org.ico",
     "slug": "customer-forgot-password-api",
-    "status": "down",
+    "status": "up",
     "uptime": "0.51%",
     "uptimeDay": "0.00%",
     "uptimeWeek": "0.51%",
     "uptimeMonth": "0.51%",
     "uptimeYear": "0.51%",
-    "time": 292,
-    "timeDay": 236,
-    "timeWeek": 292,
-    "timeMonth": 292,
-    "timeYear": 292,
+    "time": 290,
+    "timeDay": 235,
+    "timeWeek": 290,
+    "timeMonth": 290,
+    "timeYear": 290,
     "dailyMinutesDown": {
-      "2024-09-13": 1317,
+      "2024-09-13": 1329,
       "2024-09-12": 1697,
       "2024-09-11": 368
     }
@@ -169,7 +169,7 @@
     "timeMonth": 246,
     "timeYear": 246,
     "dailyMinutesDown": {
-      "2024-09-13": 1260,
+      "2024-09-13": 1272,
       "2024-09-12": 1054
     }
   },
@@ -190,7 +190,7 @@
     "timeMonth": 107,
     "timeYear": 107,
     "dailyMinutesDown": {
-      "2024-09-13": 1260,
+      "2024-09-13": 1272,
       "2024-09-12": 762
     }
   },
@@ -211,7 +211,7 @@
     "timeMonth": 97,
     "timeYear": 97,
     "dailyMinutesDown": {
-      "2024-09-13": 1260,
+      "2024-09-13": 1272,
       "2024-09-12": 762
     }
   },
@@ -232,7 +232,7 @@
     "timeMonth": 107,
     "timeYear": 107,
     "dailyMinutesDown": {
-      "2024-09-13": 1260,
+      "2024-09-13": 1272,
       "2024-09-12": 762
     }
   },
@@ -253,7 +253,7 @@
     "timeMonth": 97,
     "timeYear": 97,
     "dailyMinutesDown": {
-      "2024-09-13": 1260,
+      "2024-09-13": 1272,
       "2024-09-12": 762
     }
   },
@@ -274,7 +274,7 @@
     "timeMonth": 116,
     "timeYear": 116,
     "dailyMinutesDown": {
-      "2024-09-13": 1260,
+      "2024-09-13": 1272,
       "2024-09-12": 762
     }
   },
@@ -295,7 +295,7 @@
     "timeMonth": 97,
     "timeYear": 97,
     "dailyMinutesDown": {
-      "2024-09-13": 1260,
+      "2024-09-13": 1272,
       "2024-09-12": 762
     }
   },
@@ -316,7 +316,7 @@
     "timeMonth": 113,
     "timeYear": 113,
     "dailyMinutesDown": {
-      "2024-09-13": 1260,
+      "2024-09-13": 1273,
       "2024-09-12": 762,
       "2024-09-11": 1
     }
@@ -338,7 +338,7 @@
     "timeMonth": 100,
     "timeYear": 100,
     "dailyMinutesDown": {
-      "2024-09-13": 1260,
+      "2024-09-13": 1273,
       "2024-09-12": 762,
       "2024-09-11": 1
     }
@@ -360,7 +360,7 @@
     "timeMonth": 100,
     "timeYear": 100,
     "dailyMinutesDown": {
-      "2024-09-13": 1260,
+      "2024-09-13": 1273,
       "2024-09-12": 762
     }
   },
@@ -381,7 +381,7 @@
     "timeMonth": 105,
     "timeYear": 105,
     "dailyMinutesDown": {
-      "2024-09-13": 1260,
+      "2024-09-13": 1273,
       "2024-09-12": 762
     }
   },
@@ -402,7 +402,7 @@
     "timeMonth": 102,
     "timeYear": 102,
     "dailyMinutesDown": {
-      "2024-09-13": 1260,
+      "2024-09-13": 1273,
       "2024-09-12": 762,
       "2024-09-11": 1
     }
@@ -424,7 +424,7 @@
     "timeMonth": 114,
     "timeYear": 114,
     "dailyMinutesDown": {
-      "2024-09-13": 1261,
+      "2024-09-13": 1273,
       "2024-09-12": 762
     }
   },
@@ -445,7 +445,7 @@
     "timeMonth": 90,
     "timeYear": 90,
     "dailyMinutesDown": {
-      "2024-09-13": 1261,
+      "2024-09-13": 1273,
       "2024-09-12": 762,
       "2024-09-11": 1
     }
@@ -467,7 +467,7 @@
     "timeMonth": 128,
     "timeYear": 128,
     "dailyMinutesDown": {
-      "2024-09-13": 1261,
+      "2024-09-13": 1273,
       "2024-09-12": 762,
       "2024-09-11": 1
     }
@@ -489,7 +489,7 @@
     "timeMonth": 110,
     "timeYear": 110,
     "dailyMinutesDown": {
-      "2024-09-13": 1261,
+      "2024-09-13": 1273,
       "2024-09-12": 762
     }
   },
@@ -555,11 +555,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/app.connecthear.org.ico",
     "slug": "interpreter-google-login-api",
     "status": "up",
-    "uptime": "75.91%",
-    "uptimeDay": "83.54%",
-    "uptimeWeek": "75.91%",
-    "uptimeMonth": "75.91%",
-    "uptimeYear": "75.91%",
+    "uptime": "75.99%",
+    "uptimeDay": "84.38%",
+    "uptimeWeek": "75.99%",
+    "uptimeMonth": "75.99%",
+    "uptimeYear": "75.99%",
     "time": 172,
     "timeDay": 189,
     "timeWeek": 172,
@@ -577,7 +577,7 @@
     "slug": "interpreter-forgot-password-api",
     "status": "up",
     "uptime": "0.00%",
-    "uptimeDay": "39.34%",
+    "uptimeDay": "44.14%",
     "uptimeWeek": "0.00%",
     "uptimeMonth": "0.00%",
     "uptimeYear": "0.00%",
@@ -599,7 +599,7 @@
     "slug": "interpreter-verify-code-api",
     "status": "up",
     "uptime": "0.00%",
-    "uptimeDay": "39.34%",
+    "uptimeDay": "44.13%",
     "uptimeWeek": "0.00%",
     "uptimeMonth": "0.00%",
     "uptimeYear": "0.00%",
@@ -620,7 +620,7 @@
     "slug": "interpreter-reset-password-api",
     "status": "up",
     "uptime": "0.00%",
-    "uptimeDay": "39.33%",
+    "uptimeDay": "44.13%",
     "uptimeWeek": "0.00%",
     "uptimeMonth": "0.00%",
     "uptimeYear": "0.00%",
