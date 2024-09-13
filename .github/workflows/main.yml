@@ -27,17 +27,19 @@ jobs:
     # Step 3: Replace {{TOKEN}} with the actual token in .upptimerc.yml
     - name: Replace TOKEN in .upptimerc.yml
       run: |
-        sed -i "s/Bearer \({{ACCESS_TOKEN}}\|[a-zA-Z0-9._-]*\)/Bearer ${TOKEN}/g" ./.upptimerc.yml
+        sed -i "s/Bearer \({{TOKEN}}\|[a-zA-Z0-9._-]*\)/Bearer ${TOKEN}/g" ./.upptimerc.yml
         echo "Token replacement complete."
         
     # Step 4: Commit the changes to .upptimerc.yml with the injected token
-    - name: Commit .upptimerc.yml Changes
+    - name: Commit and Push .upptimerc.yml Changes
       run: |
         git config --global user.email "github-actions@github.com"
         git config --global user.name "GitHub Actions"
         git add .upptimerc.yml
         git commit -m "Update .upptimerc.yml with dynamic token"
-        git push
+        git pull origin master --rebase  # Pull the latest changes and rebase to avoid conflicts
+        git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git master
+
 
     # Step 5: Run Upptime Monitoring (Trigger after token replacement)
     - name: Run Upptime Monitoring
