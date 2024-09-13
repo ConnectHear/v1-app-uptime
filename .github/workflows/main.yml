@@ -29,10 +29,8 @@ jobs:
 
     - name: Update upptimerc.yml with new token
       run: |
-        sed -i "s/{{ACCESS_TOKEN}}/${TOKEN//\//\\/}/g" ./.upptimerc.yml
-
-    - name: Check Updated upptimerc.yml
-      run: cat ./.upptimerc.yml | grep ACCESS_TOKEN
+        sed -i "s/Bearer \({{ACCESS_TOKEN}}\|[a-zA-Z0-9._-]*\)/Bearer ${TOKEN}/g" ./.upptimerc.yml  # Replacing placeholder or existing token with new token
+        cat ./.upptimerc.yml | grep Bearer  # Debugging step to verify the replacement
 
     - name: Commit and push updated upptimerc.yml
       run: |
