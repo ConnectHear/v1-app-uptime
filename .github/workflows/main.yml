@@ -22,7 +22,7 @@ jobs:
 
     - name: Update upptimerc.yml with new token
       run: |
-        sed -i "s/{{ACCESS_TOKEN}}/$TOKEN/g" ./upptimerc.yml
+        sed -i "s/{{ACCESS_TOKEN}}/$TOKEN/g" ./.upptimerc.yml
 
     - name: Commit and push updated upptimerc.yml
       run: |
