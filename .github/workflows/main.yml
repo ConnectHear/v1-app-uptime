@@ -17,7 +17,9 @@ jobs:
       run: |
         TOKEN=$(curl -X POST https://app.connecthear.org/api/v1/customer/login \
         -H "Content-Type: application/json" \
-        -d '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment"}' | jq -r '.access_token')
+        -d '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment"}' | \
+        jq -r '.response.detail.token_detail.access_token')
+        
         echo "TOKEN=$TOKEN" >> $GITHUB_ENV
 
     - name: Update upptimerc.yml with new token
