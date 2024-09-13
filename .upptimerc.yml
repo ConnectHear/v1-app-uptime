@@ -24,19 +24,6 @@ sites:
     check: "http"
     headers:
       - "Content-Type: application/json"
-
-
- # Add your dynamic token retrieval logic
-  - name: Retrieve Access Token
-    run: |
-      TOKEN=$(curl -X POST https://app.connecthear.org/api/v1/customer/login \
-      -H "Content-Type: application/json" \
-      -d '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment"}' | \
-      jq -r '.response.detail.token_detail.access_token')
-      echo "TOKEN=$TOKEN" >> $GITHUB_ENV
-    env:
-      GH_PAT: ${{ secrets.GH_PAT || github.token }}
-
       
   - name: Customer Google Login API # Monitoring the Google Login API
     url: https://app.connecthear.org/api/v1/customer/google-login
