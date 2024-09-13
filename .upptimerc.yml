@@ -10,7 +10,7 @@ sites:
       - 200
       - 201
       - 422
-    check: "https"
+    check: "http"
     headers:
       - "Content-Type: application/json"
   - name: Customer Login API # Monitoring the login API
