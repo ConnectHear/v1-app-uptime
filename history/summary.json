@@ -72,7 +72,7 @@
     "timeMonth": 296,
     "timeYear": 296,
     "dailyMinutesDown": {
-      "2024-09-13": 1009,
+      "2024-09-13": 1013,
       "2024-09-12": 1697,
       "2024-09-11": 368
     }
@@ -169,7 +169,7 @@
     "timeMonth": 236,
     "timeYear": 236,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 1054
     }
   },
@@ -190,7 +190,7 @@
     "timeMonth": 103,
     "timeYear": 103,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762
     }
   },
@@ -211,7 +211,7 @@
     "timeMonth": 95,
     "timeYear": 95,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762
     }
   },
@@ -232,7 +232,7 @@
     "timeMonth": 103,
     "timeYear": 103,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762
     }
   },
@@ -253,7 +253,7 @@
     "timeMonth": 95,
     "timeYear": 95,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762
     }
   },
@@ -274,7 +274,7 @@
     "timeMonth": 116,
     "timeYear": 116,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762
     }
   },
@@ -295,7 +295,7 @@
     "timeMonth": 94,
     "timeYear": 94,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762
     }
   },
@@ -316,7 +316,7 @@
     "timeMonth": 112,
     "timeYear": 112,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762,
       "2024-09-11": 1
     }
@@ -338,7 +338,7 @@
     "timeMonth": 98,
     "timeYear": 98,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762,
       "2024-09-11": 1
     }
@@ -360,7 +360,7 @@
     "timeMonth": 98,
     "timeYear": 98,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762
     }
   },
@@ -381,7 +381,7 @@
     "timeMonth": 103,
     "timeYear": 103,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762
     }
   },
@@ -402,7 +402,7 @@
     "timeMonth": 101,
     "timeYear": 101,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762,
       "2024-09-11": 1
     }
@@ -424,7 +424,7 @@
     "timeMonth": 107,
     "timeYear": 107,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762
     }
   },
@@ -445,7 +445,7 @@
     "timeMonth": 87,
     "timeYear": 87,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762,
       "2024-09-11": 1
     }
@@ -467,7 +467,7 @@
     "timeMonth": 123,
     "timeYear": 123,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762,
       "2024-09-11": 1
     }
@@ -489,7 +489,7 @@
     "timeMonth": 109,
     "timeYear": 109,
     "dailyMinutesDown": {
-      "2024-09-13": 952,
+      "2024-09-13": 956,
       "2024-09-12": 762
     }
   },
@@ -555,11 +555,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/app.connecthear.org.ico",
     "slug": "interpreter-google-login-api",
     "status": "up",
-    "uptime": "73.50%",
-    "uptimeDay": "62.12%",
-    "uptimeWeek": "73.50%",
-    "uptimeMonth": "73.50%",
-    "uptimeYear": "73.50%",
+    "uptime": "73.54%",
+    "uptimeDay": "62.42%",
+    "uptimeWeek": "73.54%",
+    "uptimeMonth": "73.54%",
+    "uptimeYear": "73.54%",
     "time": 167,
     "timeDay": 180,
     "timeWeek": 167,
@@ -618,19 +618,19 @@
     "url": "https://app.connecthear.org/api/v1/interpreter/reset-password",
     "icon": "https://icons.duckduckgo.com/ip3/app.connecthear.org.ico",
     "slug": "interpreter-reset-password-api",
-    "status": "down",
+    "status": "up",
     "uptime": "0.00%",
     "uptimeDay": "0.00%",
     "uptimeWeek": "0.00%",
     "uptimeMonth": "0.00%",
     "uptimeYear": "0.00%",
-    "time": 184,
-    "timeDay": 181,
-    "timeWeek": 184,
-    "timeMonth": 184,
-    "timeYear": 184,
+    "time": 182,
+    "timeDay": 177,
+    "timeWeek": 182,
+    "timeMonth": 182,
+    "timeYear": 182,
     "dailyMinutesDown": {
-      "2024-09-13": 58,
+      "2024-09-13": 63,
       "2024-09-12": 762
     }
   }
