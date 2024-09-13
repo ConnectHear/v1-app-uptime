@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/customer/create-video-session
 status: down
 code: 500
-responseTime: 98
-lastUpdated: 2024-09-13T07:48:15.868Z
+responseTime: 66
+lastUpdated: 2024-09-13T08:52:03.400Z
 startTime: 2024-09-12T11:17:54.652Z
 generator: Upptime <https://github.com/upptime/upptime>
