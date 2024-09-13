@@ -1,0 +1,33 @@
+name: Update Access Token
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"  # Runs every 6 hours
+  workflow_dispatch:
+
+jobs:
+  update-token:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Get access token from Login API
+      run: |
+        TOKEN=$(curl -X POST https://app.connecthear.org/api/v1/customer/login \
+        -H "Content-Type: application/json" \
+        -d '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment"}' | jq -r '.access_token')
+        echo "TOKEN=$TOKEN" >> $GITHUB_ENV
+
+    - name: Update upptimerc.yml with new token
+      run: |
+        sed -i "s/{{ACCESS_TOKEN}}/$TOKEN/g" ./upptimerc.yml
+
+    - name: Commit and push updated upptimerc.yml
+      run: |
+        git config --global user.email "github-actions@github.com"
+        git config --global user.name "GitHub Actions"
+        git add upptimerc.yml
+        git commit -m "Update access token for Get Profile API"
+        git push
