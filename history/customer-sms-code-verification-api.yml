@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/customer/verify-sms-code
 status: up
 code: 422
-responseTime: 81
-lastUpdated: 2024-09-20T23:14:52.199Z
+responseTime: 49
+lastUpdated: 2024-09-21T23:14:19.719Z
 startTime: 2024-09-13T14:29:29.531Z
 generator: Upptime <https://github.com/upptime/upptime>
