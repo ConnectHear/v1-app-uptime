@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/customer/login
-status: up
-code: 200
-responseTime: 6258
-lastUpdated: 2024-09-22T17:44:19.249Z
+status: down
+code: 0
+responseTime: 0
+lastUpdated: 2024-09-22T17:59:18.119Z
 startTime: 2024-09-11T12:19:44.438Z
 generator: Upptime <https://github.com/upptime/upptime>
