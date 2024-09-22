@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/interpreter/google-login
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2024-09-22T19:32:18.105Z
+status: up
+code: 200
+responseTime: 149
+lastUpdated: 2024-09-22T20:27:55.284Z
 startTime: 2024-09-11T12:19:58.787Z
 generator: Upptime <https://github.com/upptime/upptime>
