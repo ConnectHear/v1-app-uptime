@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/customer/verify-code
-status: up
-code: 422
-responseTime: 820
-lastUpdated: 2024-09-22T17:44:33.924Z
+status: down
+code: 0
+responseTime: 0
+lastUpdated: 2024-09-22T19:38:26.761Z
 startTime: 2024-09-13T14:29:29.037Z
 generator: Upptime <https://github.com/upptime/upptime>
