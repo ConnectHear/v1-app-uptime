@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/customer/get-call-logs
 status: down
 code: 500
-responseTime: 118
-lastUpdated: 2024-09-26T23:16:03.877Z
+responseTime: 61
+lastUpdated: 2024-09-27T23:15:26.594Z
 startTime: 2024-09-13T14:29:44.255Z
 generator: Upptime <https://github.com/upptime/upptime>
