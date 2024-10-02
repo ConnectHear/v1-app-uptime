@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/customer/get-reviews
 status: down
 code: 500
-responseTime: 143
-lastUpdated: 2024-10-01T23:15:40.276Z
+responseTime: 60
+lastUpdated: 2024-10-02T23:15:56.896Z
 startTime: 2024-09-13T14:29:40.369Z
 generator: Upptime <https://github.com/upptime/upptime>
