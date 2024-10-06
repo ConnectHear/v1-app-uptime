@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/customer/update-device-token
 status: down
 code: 500
-responseTime: 60
-lastUpdated: 2024-10-06T23:14:33.778Z
+responseTime: 65
+lastUpdated: 2024-10-06T23:14:34.504Z
 startTime: 2024-09-12T11:17:40.967Z
 generator: Upptime <https://github.com/upptime/upptime>
