@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/customer/get-profile
 status: down
 code: 500
-responseTime: 205
-lastUpdated: 2024-10-10T23:15:31.782Z
+responseTime: 139
+lastUpdated: 2024-10-11T23:15:20.274Z
 startTime: 2024-09-12T06:25:31.091Z
 generator: Upptime <https://github.com/upptime/upptime>
