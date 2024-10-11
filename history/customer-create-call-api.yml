@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/customer/create-call
 status: down
 code: 500
-responseTime: 87
-lastUpdated: 2024-10-10T23:15:35.596Z
+responseTime: 80
+lastUpdated: 2024-10-11T23:15:23.672Z
 startTime: 2024-09-13T14:29:39.639Z
 generator: Upptime <https://github.com/upptime/upptime>
