@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/customer/get-plans
 status: down
 code: 500
-responseTime: 56
-lastUpdated: 2024-10-13T23:15:56.206Z
+responseTime: 58
+lastUpdated: 2024-10-14T23:15:19.112Z
 startTime: 2024-09-13T14:29:41.089Z
 generator: Upptime <https://github.com/upptime/upptime>
