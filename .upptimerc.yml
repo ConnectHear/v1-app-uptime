@@ -39,24 +39,6 @@ jobs:
         fi
         echo "Custom Uptime Workflow completed successfully"
 
-    # Step 3: Obtain the Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNhYzNmODUyNGJlMTE0ZTMxNWE2MzY5N2IwYzJiNTUxMmFkZmE2MDJkMjQwZTY1ZWRmYTI4NmFjNjQwMTljYzA3MzdkODBmNWQ0NGVjM2NjIn0.eyJhdWQiOiIxIiwianRpIjoiM2FjM2Y4NTI0YmUxMTRlMzE1YTYzNjk3YjBjMmI1NTEyYWRmYTYwMmQyNDBlNjVlZGZhMjg2YWM2NDAxOWNjMDczN2Q4MGY1ZDQ0ZWMzY2MiLCJpYXQiOjE3Mjg5OTIxNzUsIm5iZiI6MTcyODk5MjE3NSwiZXhwIjoxNzYwNTI4MTc1LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.SEm4etV0eTaMHRdlJuU6BYDgDQ4Xtt6DkkqrgEkjotLY1PPEAnrCJ2ulBCzo3qmHyUWMy5PKeBRhmA3_CAXHbEVn0MgDBqnHDPkrO49vD7BHv2XZ7Y5rjS_anU9-bZ6_GHT3kHkftCAEehpX0PwRDvTBmK1YxxETOd3CGIt2ZS7_pdzS3X9X2h5lbinCqUkE1h5OfDWBb-ptz3D3JUZjTcNE3aW14IZNCSYamZ109bYjgiK4bYUX9dIVvqEPEkHeOXqS7bCgbSIO9da13hs-gy9p47FICdAtDrMIRaMbN1LGyHB-DtR9T9IajHoJekBVzqq3wJex4LdVwIZ8jSgWO6yiY6zs2XKHsAeYrtYHoZ5ExdvkuOc_KhZOodh568SPbTi_rUbfRB9AL7ydRa-61mpqmiWlq3VktEU-k7vgcJBnnH8BKih3T0EurJzkNSd0r1Bj6Zkdq_ZBeW0wgNSiyRIXG95VWO47TJdDAnLboHOteIx9Eo8KGBrnrJv7MIGoXWT7QU5RolEx82Lll_yGyAc0UpsKRoZemG-UDZjCsrsekzaqznTJr6_gmnq3HKXqLZBKM9nd49kiAhhgb-H_8dsYrYtpiZAt6vXH5KRX6r9puFN929frSTKDE14HSS37uc7_S1f5krvF-nT5_8a-2hFXA-AiyiXL736ZvDLG2Qg (Login to API)
-    - name: Obtain Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNhYzNmODUyNGJlMTE0ZTMxNWE2MzY5N2IwYzJiNTUxMmFkZmE2MDJkMjQwZTY1ZWRmYTI4NmFjNjQwMTljYzA3MzdkODBmNWQ0NGVjM2NjIn0.eyJhdWQiOiIxIiwianRpIjoiM2FjM2Y4NTI0YmUxMTRlMzE1YTYzNjk3YjBjMmI1NTEyYWRmYTYwMmQyNDBlNjVlZGZhMjg2YWM2NDAxOWNjMDczN2Q4MGY1ZDQ0ZWMzY2MiLCJpYXQiOjE3Mjg5OTIxNzUsIm5iZiI6MTcyODk5MjE3NSwiZXhwIjoxNzYwNTI4MTc1LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.SEm4etV0eTaMHRdlJuU6BYDgDQ4Xtt6DkkqrgEkjotLY1PPEAnrCJ2ulBCzo3qmHyUWMy5PKeBRhmA3_CAXHbEVn0MgDBqnHDPkrO49vD7BHv2XZ7Y5rjS_anU9-bZ6_GHT3kHkftCAEehpX0PwRDvTBmK1YxxETOd3CGIt2ZS7_pdzS3X9X2h5lbinCqUkE1h5OfDWBb-ptz3D3JUZjTcNE3aW14IZNCSYamZ109bYjgiK4bYUX9dIVvqEPEkHeOXqS7bCgbSIO9da13hs-gy9p47FICdAtDrMIRaMbN1LGyHB-DtR9T9IajHoJekBVzqq3wJex4LdVwIZ8jSgWO6yiY6zs2XKHsAeYrtYHoZ5ExdvkuOc_KhZOodh568SPbTi_rUbfRB9AL7ydRa-61mpqmiWlq3VktEU-k7vgcJBnnH8BKih3T0EurJzkNSd0r1Bj6Zkdq_ZBeW0wgNSiyRIXG95VWO47TJdDAnLboHOteIx9Eo8KGBrnrJv7MIGoXWT7QU5RolEx82Lll_yGyAc0UpsKRoZemG-UDZjCsrsekzaqznTJr6_gmnq3HKXqLZBKM9nd49kiAhhgb-H_8dsYrYtpiZAt6vXH5KRX6r9puFN929frSTKDE14HSS37uc7_S1f5krvF-nT5_8a-2hFXA-AiyiXL736ZvDLG2Qg
-      id: get_token
-      run: |
-        response=$(curl -X POST "https://app.connecthear.org/api/v1/customer/login" \
-          -H "Content-Type: application/json" \
-          -d '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment"}')
-        
-        # Extract token from the response, assuming it's in a field called 'token'
-        token=$(echo $response | jq -r '.token')
-        
-        if [ "$token" == "null" ] || [ -z "$token" ]; then
-          echo "Failed to retrieve API token"
-          exit 1
-        fi
-        
-        echo "::set-output name=auth_token::$token"
-
 sites:
   - name: Customer Sign-Up API
     url: https://app.connecthear.org/api/v1/customer/sign-up
