@@ -1,7 +1,7 @@
 url: https://app.connecthear.org/api/v1/customer/update-monitoring-session-status
 status: down
 code: 500
-responseTime: 67
-lastUpdated: 2024-10-14T23:15:20.249Z
+responseTime: 64
+lastUpdated: 2024-10-15T08:36:54.086Z
 startTime: 2024-09-13T14:29:43.381Z
 generator: Upptime <https://github.com/upptime/upptime>
