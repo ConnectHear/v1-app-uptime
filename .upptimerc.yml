@@ -15,7 +15,7 @@ jobs:
         -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
         https://api.github.com/repos/${{ github.repository }}/actions/workflows/main.yml/dispatches \
         -d '{"ref":"main"}'
-
+    
     # Step 2: Wait for the completion of `main.yml` (Polling)
     - name: Wait for main.yml completion
       id: wait_for_main
@@ -39,303 +39,505 @@ jobs:
         fi
         echo "Custom Uptime Workflow completed successfully"
 
-    # Step 3: Obtain the Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUyYTYyZDM5NTQ0YzJiNWNmNWRmMDhjZDM2MzNhZWM5YjdmYTIzNDEwY2QxNDBkNjkyNzNiOTZlZjExYzQwYjcwZTc2OWIzYWNjZjgzNTc5In0.eyJhdWQiOiIxIiwianRpIjoiNTJhNjJkMzk1NDRjMmI1Y2Y1ZGYwOGNkMzYzM2FlYzliN2ZhMjM0MTBjZDE0MGQ2OTI3M2I5NmVmMTFjNDBiNzBlNzY5YjNhY2NmODM1NzkiLCJpYXQiOjE3Mjg5ODA5NjQsIm5iZiI6MTcyODk4MDk2NCwiZXhwIjoxNzYwNTE2OTYzLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.3tO8pisgOjYR2Saue1cxjFv81UY4sNwFAldcql67JimTglIO6EUQhEdoE8fESc9bRF5ZyJ12HZdltxQgJ2cv7V5JpkSUHoteVqyS5DFQHssmqOTpPB3mkq9ACV2up3I_b_waaxr7_leX4u8f1_Zgh6uQBJopkfLw2UkMy7tT45ja5UNWWfTO4V8KI4Tc0s4fdA5wUg1ODjOxdl_D2EXhiFiVr-T4pmE4G2-Ml0naomXgO2JEJYbxc86REhzLpfrDdt9Sk8UH-Dy6zc3Czl9WFpjhi8xRptEvzcojkV0ytfbfpInoQTLnVppqvI2aQHSmL67cEdRp0tCbV0h1-8NjvruLbwYVGSOgqtwlJYSfXBV9zN0sjYceev9JUQZpVqP_W4NF4zVBgjEOdZ-sBVZOfSWP8tVkd3ksHAFq6ubrKEBag-xYl3LRTuvkH34CrOrA8vDMy1dA6phydSbcgYkUk6dMZpkxrKnYFyWyDWBl1RtPePKB7BMkLCghjDYOxo1Os-9fgXWQkkSmfL_Px1yVoPcuiZj75cpx9gWskL8OfoEz-XWHISPZOg_YpnQi_WWYq-uaepio6QtmWMNP2JYWKslwt9DkGWvNu2KKfpRD7KKS30qE8rCRoEMgWVou4wm8KQ2svYriWUY_o8HG-TA7PWh8-XeVQCCZJlS9jz7AFhc (Login to API)
-    - name: Obtain Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUyYTYyZDM5NTQ0YzJiNWNmNWRmMDhjZDM2MzNhZWM5YjdmYTIzNDEwY2QxNDBkNjkyNzNiOTZlZjExYzQwYjcwZTc2OWIzYWNjZjgzNTc5In0.eyJhdWQiOiIxIiwianRpIjoiNTJhNjJkMzk1NDRjMmI1Y2Y1ZGYwOGNkMzYzM2FlYzliN2ZhMjM0MTBjZDE0MGQ2OTI3M2I5NmVmMTFjNDBiNzBlNzY5YjNhY2NmODM1NzkiLCJpYXQiOjE3Mjg5ODA5NjQsIm5iZiI6MTcyODk4MDk2NCwiZXhwIjoxNzYwNTE2OTYzLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.3tO8pisgOjYR2Saue1cxjFv81UY4sNwFAldcql67JimTglIO6EUQhEdoE8fESc9bRF5ZyJ12HZdltxQgJ2cv7V5JpkSUHoteVqyS5DFQHssmqOTpPB3mkq9ACV2up3I_b_waaxr7_leX4u8f1_Zgh6uQBJopkfLw2UkMy7tT45ja5UNWWfTO4V8KI4Tc0s4fdA5wUg1ODjOxdl_D2EXhiFiVr-T4pmE4G2-Ml0naomXgO2JEJYbxc86REhzLpfrDdt9Sk8UH-Dy6zc3Czl9WFpjhi8xRptEvzcojkV0ytfbfpInoQTLnVppqvI2aQHSmL67cEdRp0tCbV0h1-8NjvruLbwYVGSOgqtwlJYSfXBV9zN0sjYceev9JUQZpVqP_W4NF4zVBgjEOdZ-sBVZOfSWP8tVkd3ksHAFq6ubrKEBag-xYl3LRTuvkH34CrOrA8vDMy1dA6phydSbcgYkUk6dMZpkxrKnYFyWyDWBl1RtPePKB7BMkLCghjDYOxo1Os-9fgXWQkkSmfL_Px1yVoPcuiZj75cpx9gWskL8OfoEz-XWHISPZOg_YpnQi_WWYq-uaepio6QtmWMNP2JYWKslwt9DkGWvNu2KKfpRD7KKS30qE8rCRoEMgWVou4wm8KQ2svYriWUY_o8HG-TA7PWh8-XeVQCCZJlS9jz7AFhc
-      id: get_token
-      run: |
-        response=$(curl -X POST "https://app.connecthear.org/api/v1/customer/login" \
-          -H "Content-Type: application/json" \
-          -d '{"email": "${{ secrets.API_USERNAME }}", "password": "${{ secrets.API_PASSWORD }}"}')
-        
-        # Extract token from the response
-        token=$(echo $response | jq -r '.token')
-        
-        if [ "$token" == "null" ] || [ -z "$token" ]; then
-          echo "Failed to retrieve API token"
-          exit 1
-        fi
-        
-        echo "::set-output name=auth_token::$token"
+sites:
+  - name: Customer Sign-Up API
+    url: https://app.connecthear.org/api/v1/customer/sign-up
+    method: POST
+    body: '{"name": "Test User", "email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment","date_of_birth": "1990-01-01","mobile_number": "1234567890","gender": "Male","latitude": "25.276987","longitude": "55.296249","code": ""}'
+    expectedStatusCodes:
+      - 200
+      - 201
+      - 422
+    check: "http"
+    headers:
+      - "Content-Type: application/json"
+  - name: Customer Login API # Monitoring the login API
+    url: https://app.connecthear.org/api/v1/customer/login
+    method: POST
+    body: '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment"}'
+    expectedStatusCodes:
+      - 200
+      - 401
+      - 422
+    check: "http"
+    headers:
+      - "Content-Type: application/json"
+      
+  - name: Customer Google Login API # Monitoring the Google Login API
+    url: https://app.connecthear.org/api/v1/customer/google-login
+    method: POST
+    body: '{"name": "Upptime", "email": "uptime@connecthear.org", "google_id": "{{TOKEN}}"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "http"
+    headers:
+      - "Content-Type: application/json"
+  - name: Customer Forgot Password API # Monitoring the Forgot Password API
+    url: https://app.connecthear.org/api/v1/customer/forgot-password
+    method: POST
+    body: '{"email": "uptime@connecthear.org"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "http"
+    headers:
+      - "Content-Type: application/json"
+  - name: Customer Code Verfication API # Monitoring the Verify Code API
+    url: https://app.connecthear.org/api/v1/customer/verify-code
+    method: POST
+    body: '{"email": "uptime@connecthear.org", "verification_code": "1234", "password": "connecthearapplicationdevelopment", "password_confirmation": "connecthearapplicationdevelopment1"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "http"
+    headers:
+      - "Content-Type: application/json"
+  - name: Customer sms Code Verification API # Monitoring the Verify SMS Code API
+    url: https://app.connecthear.org/api/v1/customer/verify-sms-code
+    method: POST
+    body: '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "mobile_number": "1234567890", "verification_code": "1234"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "http"
+    headers:
+      - "Content-Type: application/json"
+  - name: Customer Password Reset API # Monitoring the Reset Password API
+    url: https://app.connecthear.org/api/v1/customer/reset-password
+    method: POST
+    headers:
+      - "Content-Type: application/json"
+    body: '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "password_confirmation": "connecthearapplicationdevelopment"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "http"
+  - name: Customer Resend OTP API # Monitoring the Resend OTP API
+    url: https://app.connecthear.org/api/v1/customer/resend-otp
+    method: POST
+    headers:
+      - "Content-Type: application/json"
+    body: '{"email": "uptime@connecthear.org"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "http"
+  - name: Customer Get Profile API # Monitoring the Get Profile API
+    url: https://app.connecthear.org/api/v1/customer/get-profile
+    method: GET
+    headers:
+      - "Content-Type: application/json;charset=UTF-8"
+      - "Authorization: Bearer " 
+    expectedStatusCodes:
+      - 200
+      - 403  # Account disabled by user or company
+    check: "http"
 
-    # Step 4: Use the Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUyYTYyZDM5NTQ0YzJiNWNmNWRmMDhjZDM2MzNhZWM5YjdmYTIzNDEwY2QxNDBkNjkyNzNiOTZlZjExYzQwYjcwZTc2OWIzYWNjZjgzNTc5In0.eyJhdWQiOiIxIiwianRpIjoiNTJhNjJkMzk1NDRjMmI1Y2Y1ZGYwOGNkMzYzM2FlYzliN2ZhMjM0MTBjZDE0MGQ2OTI3M2I5NmVmMTFjNDBiNzBlNzY5YjNhY2NmODM1NzkiLCJpYXQiOjE3Mjg5ODA5NjQsIm5iZiI6MTcyODk4MDk2NCwiZXhwIjoxNzYwNTE2OTYzLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.3tO8pisgOjYR2Saue1cxjFv81UY4sNwFAldcql67JimTglIO6EUQhEdoE8fESc9bRF5ZyJ12HZdltxQgJ2cv7V5JpkSUHoteVqyS5DFQHssmqOTpPB3mkq9ACV2up3I_b_waaxr7_leX4u8f1_Zgh6uQBJopkfLw2UkMy7tT45ja5UNWWfTO4V8KI4Tc0s4fdA5wUg1ODjOxdl_D2EXhiFiVr-T4pmE4G2-Ml0naomXgO2JEJYbxc86REhzLpfrDdt9Sk8UH-Dy6zc3Czl9WFpjhi8xRptEvzcojkV0ytfbfpInoQTLnVppqvI2aQHSmL67cEdRp0tCbV0h1-8NjvruLbwYVGSOgqtwlJYSfXBV9zN0sjYceev9JUQZpVqP_W4NF4zVBgjEOdZ-sBVZOfSWP8tVkd3ksHAFq6ubrKEBag-xYl3LRTuvkH34CrOrA8vDMy1dA6phydSbcgYkUk6dMZpkxrKnYFyWyDWBl1RtPePKB7BMkLCghjDYOxo1Os-9fgXWQkkSmfL_Px1yVoPcuiZj75cpx9gWskL8OfoEz-XWHISPZOg_YpnQi_WWYq-uaepio6QtmWMNP2JYWKslwt9DkGWvNu2KKfpRD7KKS30qE8rCRoEMgWVou4wm8KQ2svYriWUY_o8HG-TA7PWh8-XeVQCCZJlS9jz7AFhc for Authenticated API Checks
 
-    # API 1: Customer Sign-Up API (No Auth Required)
-    - name: Check Customer Sign-Up API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/sign-up" \
-        -H "Content-Type: application/json" \
-        -d '{"name": "Test User", "email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment","date_of_birth": "1990-01-01","mobile_number": "1234567890","gender": "Male","latitude": "25.276987","longitude": "55.296249","code": ""}'
 
-    # API 2: Customer Login API (Already Handled in Step 3 for Token)
-    # No need to check this again, already done for token retrieval
 
-    # API 3: Customer Google Login API
-    - name: Check Customer Google Login API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/google-login" \
-        -H "Content-Type: application/json" \
-        -d '{"name": "Upptime", "email": "uptime@connecthear.org", "google_id": "your_google_id"}'
+  - name: Customer Update Device Token API # Monitoring the Update Device Token API
+    url: https://app.connecthear.org/api/v1/customer/update-device-token
+    method: POST
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "http"
+  - name: Customer Change Password API # Monitoring the Change Password API
+    url: https://app.connecthear.org/api/v1/customer/change-password
+    method: POST
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "http"
+  - name: Customer Update Device Token API # Monitoring the Update Device Token API
+    url: https://app.connecthear.org/api/v1/customer/update-device-token
+    method: POST
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+    body: '{"device_token": "your_device_token_here", "device_type": "your_device_type_here"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "http"
+  - name: Customer Change Password API # Monitoring the Change Password API
+    url: https://app.connecthear.org/api/v1/customer/change-password
+    method: POST
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+    body: '{"current_password": "your_current_password_here", "password": "your_new_password_here", "password_confirmation": "your_new_password_here"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "http"
+  - name: Customer Files Add API
+    url: https://app.connecthear.org/api/v1/customer/files-add
+    method: POST
+    body: '{"avatar": "<base64_encoded_image>", "cnic": "<base64_encoded_image>"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+  - name: Customer Add Reviews API
+    url: https://app.connecthear.org/api/v1/customer/add-reviews
+    method: POST
+    body: '{"monitoring_id": "example_monitoring_id", "rating": 4, "reviews": "This is a test review."}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+  - name: Customer Complaint API
+    url: https://app.connecthear.org/api/v1/customer/create-complaint
+    method: POST
+    body: '{"contact_number": "1234567890", "complaint": "This is a test complaint."}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+  - name: Customer Create Video Session API
+    url: https://app.connecthear.org/api/v1/customer/create-video-session
+    method: POST
+    body: '{"latitude": 25.276987, "longitude": 55.296249}'
+    expectedStatusCodes:
+      - 200
+      - 402
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+  - name: Customer Create Call API
+    url: https://app.connecthear.org/api/v1/customer/create-call
+    method: POST
+    body: '{"monitoring_id": "example-monitoring-id"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+  - name: ConnectHear Get Reviews API
+    url: https://app.connecthear.org/api/v1/customer/get-reviews
+    method: GET
+    expectedStatusCodes:
+      - 200
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+  - name: Customer Plans API
+    url: https://app.connecthear.org/api/v1/customer/get-plans
+    method: GET
+    expectedStatusCodes:
+      - 200
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+  - name: Customer Update Profile API
+    url: https://app.connecthear.org/api/v1/customer/update-profile
+    method: POST
+    body: '{"name": "Test User", "date_of_birth": "1990-01-01", "gender": "Male", "mobile_number": "1234567890", "avatar": "base64_encoded_image_data"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+  - name: Customer Subscription API
+    url: https://app.connecthear.org/api/v1/customer/make-subscription
+    method: POST
+    body: '{"plan_id": "123456"}'
+    expectedStatusCodes:
+      - 200
+      - 400
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+  - name: Customer Update Monitoring Session Status API
+    url: https://app.connecthear.org/api/v1/customer/update-monitoring-session-status
+    method: POST
+    body: '{"monitoring_id": "abc123", "status": 2, "call_duration": "00:30:00"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+  - name: Customer Get Call Logs API
+    url: https://app.connecthear.org/api/v1/customer/get-call-logs
+    method: GET
+    expectedStatusCodes:
+      - 200
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer " 
+    # - name: Customer Logout API # Monitoring the Logout API
+    # url: https://app.connecthear.org/api/v1/customer/logout
+    # method: POST
+    # headers:
+    #   - "Content-Type: application/json"
+    #   - "Authorization: Bearer " 
+    # expectedStatusCodes:
+    #   - 200
+    #   - 422
+    # check: "http"
+  - name: Interpreter Sign-Up API
+    url: https://app.connecthear.org/api/v1/interpreter/sign-up
+    method: POST
+    body: '{"name": "Upptime", "email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "mobile_number": "1234567890", "gender": "male", "date_of_birth": "1990-01-01", "occupation": "Interpreter", "address": "123 Main St", "latitude": "34.0522", "longitude": "-118.2437", "avatar": "base64_encoded_image", "cnic": "base64_encoded_cnic"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+  - name: Interpreter Verify SMS Code API
+    url: https://app.connecthear.org/api/v1/interpreter/verify-sms-code
+    method: POST
+    body: '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "mobile_number": "1234567890", "otp": "1234"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+  - name: Interpreter Login API
+    url: https://app.connecthear.org/api/v1/interpreter/login
+    method: POST
+    body: '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+  - name: Interpreter Google Login API
+    url: https://app.connecthear.org/api/v1/interpreter/google-login
+    method: POST
+    body: '{"name": "Upptime", "email": "uptime@connecthear.org", "google_id": "your_google_id"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+  - name: Interpreter Forgot Password API
+    url: https://app.connecthear.org/api/v1/interpreter/forgot-password
+    method: POST
+    body: '{"email": "uptime@connecthear.org"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+  - name: Interpreter Verify Code API
+    url: https://app.connecthear.org/api/v1/interpreter/verify-code
+    method: POST
+    body: '{"email": "uptime@connecthear.org", "verification_code": "1234"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+  - name: Interpreter Reset Password API
+    url: https://app.connecthear.org/api/v1/interpreter/reset-password
+    method: POST
+    body: '{"email": "uptime@connecthear.org", "password": "new_password", "password_confirmation": "new_password"}'
+    expectedStatusCodes:
+      - 200
+      - 422
+    check: "https"
+    headers:
+      - "Content-Type: application/json"
+  # - name: Interpreter Files Add API
+  #   url: https://app.connecthear.org/api/v1/interpreter/files-add
+  #   method: POST
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   body: '{"avatar": "base64_encoded_avatar", "cnic": "base64_encoded_cnic"}'
+  #   headers:
+  #     - "Content-Type: application/json"
+  #     - "Authorization: Bearer "
+  # - name: Interpreter Update Device Token API
+  #   url: https://app.connecthear.org/api/v1/interpreter/update-device-token
+  #   method: POST
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   body: '{"device_token": "your_device_token", "device_type": "your_device_type"}'
+  #   headers:
+  #     - "Content-Type: application/json"
+  #     - "Authorization: Bearer "
+  # - name: Interpreter Logout API
+  #   url: https://app.connecthear.org/api/v1/interpreter/logout
+  #   method: POST
+  #   expectedStatusCodes:
+  #   - 200
+  #   - 422
+  #   check: "https"
+  #   body: {}
+  #   headers:
+  #     - "Authorization: Bearer "
+  # - name: Interpreter Get Profile API
+  #   url: https://app.connecthear.org/api/v1/interpreter/get-profile
+  #   method: GET
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 401
+  #   check: "https"
+  #   body: {}
+  #   headers:
+  #     - "Authorization: Bearer "
+  # - name: Interpreter Change Password API
+  #   url: https://app.connecthear.org/api/v1/interpreter/change-password
+  #   method: POST
+  #   body: '{"current_password": "current_password", "password": "new_password", "password_confirmation": "new_password"}'
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Authorization: Bearer "
+  #     - "Content-Type: application/json"
 
-    # API 4: Customer Forgot Password API
-    - name: Check Customer Forgot Password API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/forgot-password" \
-        -H "Content-Type: application/json" \
-        -d '{"email": "uptime@connecthear.org"}'
+  # - name: Interpreter Create Complaint API
+  #   url: https://app.connecthear.org/api/v1/interpreter/create-complaint
+  #   method: POST
+  #   body: '{"contact_number": "1234567890", "complaint": "Complaint description here"}'
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Content-Type: application/json"
+  #     - "Authorization: Bearer "
+  # - name: Interpreter Update Archive ID API
+  #   url: https://app.connecthear.org/api/v1/interpreter/update-archive-id
+  #   method: POST
+  #   body: '{"monitoring_id": "your_monitoring_id"}'
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Authorization: Bearer "
+  #     - "Content-Type: application/json"
+  # - name: Interpreter Get Reviews API
+  #   url: https://app.connecthear.org/api/v1/interpreter/get-reviews
+  #   method: GET
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Authorization: Bearer "
+  #     - "Content-Type: application/json"
+  # - name: Interpreter Update Profile API
+  #   url: https://app.connecthear.org/api/v1/interpreter/update-profile
+  #   method: POST
+  #   body: '{"name": "John Doe", "date_of_birth": "1990-01-01", "gender": "male", "occupation": "Interpreter", "address": "123 Street, City", "avatar": "avatar_base64_string"}'
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Authorization: Bearer "
+  #     - "Content-Type: application/json"
 
-    # API 5: Customer Code Verification API
-    - name: Check Customer Code Verification API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/verify-code" \
-        -H "Content-Type: application/json" \
-        -d '{"email": "uptime@connecthear.org", "verification_code": "1234", "password": "connecthearapplicationdevelopment", "password_confirmation": "connecthearapplicationdevelopment1"}'
+  # - name: Interpreter Update Monitoring Session Status API
+  #   url: https://app.connecthear.org/api/v1/interpreter/update-monitoring-session-status
+  #   method: POST
+  #   body: '{"monitoring_id": "example_monitoring_id", "status": 1, "call_duration": "00:30:00"}'
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Authorization: Bearer "
+  #     - "Content-Type: application/json"
 
-    # API 6: Customer SMS Code Verification API
-    - name: Check Customer SMS Code Verification API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/verify-sms-code" \
-        -H "Content-Type: application/json" \
-        -d '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "mobile_number": "1234567890", "verification_code": "1234"}'
+  # - name: Interpreter Add Reviews API
+  #   url: https://app.connecthear.org/api/v1/interpreter/add-reviews
+  #   method: POST
+  #   body: '{"monitoring_id": "example_monitoring_id", "rating": 4, "reviews": "Great session!"}'
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Authorization: Bearer "
+  #     - "Content-Type: application/json"
 
-    # API 7: Customer Password Reset API
-    - name: Check Customer Password Reset API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/reset-password" \
-        -H "Content-Type: application/json" \
-        -d '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "password_confirmation": "connecthearapplicationdevelopment"}'
-
-    # API 8: Customer Resend OTP API
-    - name: Check Customer Resend OTP API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/resend-otp" \
-        -H "Content-Type: application/json" \
-        -d '{"email": "uptime@connecthear.org"}'
-
-    # API 9: Customer Get Profile API (Authorization Required)
-    - name: Check Customer Get Profile API
-      run: |
-        curl -X GET "https://app.connecthear.org/api/v1/customer/get-profile" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json;charset=UTF-8"
-
-    # API 10: Customer Update Device Token API (Authorization Required)
-    - name: Check Customer Update Device Token API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/update-device-token" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"device_token": "your_device_token_here", "device_type": "your_device_type_here"}'
-
-    # API 11: Customer Change Password API (Authorization Required)
-    - name: Check Customer Change Password API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/change-password" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"current_password": "your_current_password_here", "password": "your_new_password_here", "password_confirmation": "your_new_password_here"}'
-
-    # API 12: Customer Files Add API (Authorization Required)
-    - name: Check Customer Files Add API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/files-add" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"avatar": "<base64_encoded_image>", "cnic": "<base64_encoded_image>"}'
-
-    # API 13: Customer Add Reviews API (Authorization Required)
-    - name: Check Customer Add Reviews API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/add-reviews" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"monitoring_id": "example_monitoring_id", "rating": 4, "reviews": "This is a test review."}'
-
-    # API 14: Customer Complaint API (Authorization Required)
-    - name: Check Customer Complaint API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/create-complaint" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"contact_number": "1234567890", "complaint": "This is a test complaint."}'
-
-    # API 15: Customer Create Video Session API (Authorization Required)
-    - name: Check Customer Create Video Session API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/create-video-session" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"latitude": 25.276987, "longitude": 55.296249}'
-
-    # API 16: Customer Create Call API (Authorization Required)
-    - name: Check Customer Create Call API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/create-call" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"monitoring_id": "example-monitoring-id"}'
-
-    # API 17: Customer Get Plans API (Authorization Required)
-    - name: Check Customer Get Plans API
-      run: |
-        curl -X GET "https://app.connecthear.org/api/v1/customer/get-plans" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json"
-
-    # API 18: Customer Update Profile API (Authorization Required)
-    - name: Check Customer Update Profile API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/update-profile" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"name": "Test User", "date_of_birth": "1990-01-01", "gender": "Male", "mobile_number": "1234567890", "avatar": "base64_encoded_image_data"}'
-
-    # API 19: Customer Subscription API (Authorization Required)
-    - name: Check Customer Subscription API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/make-subscription" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"plan_id": "123456"}'
-
-    # API 20: Customer Update Monitoring Session Status API (Authorization Required)
-    - name: Check Customer Update Monitoring Session Status API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/customer/update-monitoring-session-status" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"monitoring_id": "abc123", "status": 2, "call_duration": "00:30:00"}'
-
-    # API 21: Customer Get Call Logs API (Authorization Required)
-    - name: Check Customer Get Call Logs API
-      run: |
-        curl -X GET "https://app.connecthear.org/api/v1/customer/get-call-logs" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json"
-
-    ### Interpreter APIs ###
-    
-    # API 22: Interpreter Sign-Up API (No Auth Required)
-    - name: Check Interpreter Sign-Up API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/sign-up" \
-        -H "Content-Type: application/json" \
-        -d '{"name": "Upptime", "email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "mobile_number": "1234567890", "gender": "male", "date_of_birth": "1990-01-01", "occupation": "Interpreter", "address": "123 Main St", "latitude": "34.0522", "longitude": "-118.2437", "avatar": "base64_encoded_image", "cnic": "base64_encoded_cnic"}'
-
-    # API 23: Interpreter Verify SMS Code API (No Auth Required)
-    - name: Check Interpreter Verify SMS Code API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/verify-sms-code" \
-        -H "Content-Type: application/json" \
-        -d '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "mobile_number": "1234567890", "otp": "1234"}'
-
-    # API 24: Interpreter Login API (Already Handled in Step 3 for Token)
-    # No need to check this again, already done for token retrieval
-
-    # API 25: Interpreter Google Login API (No Auth Required)
-    - name: Check Interpreter Google Login API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/google-login" \
-        -H "Content-Type: application/json" \
-        -d '{"name": "Upptime", "email": "uptime@connecthear.org", "google_id": "your_google_id"}'
-
-    # API 26: Interpreter Forgot Password API (No Auth Required)
-    - name: Check Interpreter Forgot Password API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/forgot-password" \
-        -H "Content-Type: application/json" \
-        -d '{"email": "uptime@connecthear.org"}'
-
-    # API 27: Interpreter Verify Code API (No Auth Required)
-    - name: Check Interpreter Verify Code API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/verify-code" \
-        -H "Content-Type: application/json" \
-        -d '{"email": "uptime@connecthear.org", "verification_code": "1234"}'
-
-    # API 28: Interpreter Reset Password API
-    - name: Check Interpreter Reset Password API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/reset-password" \
-        -H "Content-Type: application/json" \
-        -d '{"email": "uptime@connecthear.org", "password": "new_password", "password_confirmation": "new_password"}'
-
-    # API 29: Interpreter Files Add API (Authorization Required)
-    - name: Check Interpreter Files Add API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/files-add" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"avatar": "base64_encoded_avatar", "cnic": "base64_encoded_cnic"}'
-
-    # API 30: Interpreter Update Device Token API (Authorization Required)
-    - name: Check Interpreter Update Device Token API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/update-device-token" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"device_token": "your_device_token", "device_type": "your_device_type"}'
-
-    # API 31: Interpreter Change Password API (Authorization Required)
-    - name: Check Interpreter Change Password API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/change-password" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"current_password": "current_password", "password": "new_password", "password_confirmation": "new_password"}'
-
-    # API 32: Interpreter Create Complaint API (Authorization Required)
-    - name: Check Interpreter Create Complaint API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/create-complaint" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"contact_number": "1234567890", "complaint": "Complaint description here"}'
-
-    # API 33: Interpreter Get Reviews API (Authorization Required)
-    - name: Check Interpreter Get Reviews API
-      run: |
-        curl -X GET "https://app.connecthear.org/api/v1/interpreter/get-reviews" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json"
-
-    # API 34: Interpreter Update Profile API (Authorization Required)
-    - name: Check Interpreter Update Profile API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/update-profile" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"name": "John Doe", "date_of_birth": "1990-01-01", "gender": "male", "occupation": "Interpreter", "address": "123 Street, City", "avatar": "avatar_base64_string"}'
-
-    # API 35: Interpreter Update Monitoring Session Status API (Authorization Required)
-    - name: Check Interpreter Update Monitoring Session Status API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/update-monitoring-session-status" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"monitoring_id": "example_monitoring_id", "status": 1, "call_duration": "00:30:00"}'
-
-    # API 36: Interpreter Add Reviews API (Authorization Required)
-    - name: Check Interpreter Add Reviews API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/add-reviews" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"monitoring_id": "example_monitoring_id", "rating": 4, "reviews": "Great session!"}'
-
-    # API 37: Interpreter Update Latitude and Longitude API (Authorization Required)
-    - name: Check Interpreter Update Latitude and Longitude API
-      run: |
-        curl -X POST "https://app.connecthear.org/api/v1/interpreter/update-latitude-longitude" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json" \
-        -d '{"latitude": 24.8607, "longitude": 67.0011}'
-
-    # API 38: Interpreter Get Call Logs API (Authorization Required)
-    - name: Check Interpreter Get Call Logs API
-      run: |
-        curl -X GET "https://app.connecthear.org/api/v1/interpreter/get-call-logs" \
-        -H "Authorization: Bearer ${{ steps.get_token.outputs.auth_token }}" \
-        -H "Content-Type: application/json"
+  # - name: Interpreter Update Latitude and Longitude API
+  #   url: https://app.connecthear.org/api/v1/interpreter/update-latitude-longitude
+  #   method: POST
+  #   body: '{"latitude": 24.8607, "longitude": 67.0011}'
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Authorization: Bearer "
+  #     - "Content-Type: application/json"
+  # - name: Interpreter Get Call Logs API
+  #   url: https://app.connecthear.org/api/v1/interpreter/get-call-logs
+  #   method: GET
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Authorization: Bearer "
+  #     - "Content-Type: application/json"
+  # - name:  Interpreter Manage Online Status API
+  #   url: https://app.connecthear.org/api/v1/interpreter/online-status
+  #   method: POST
+  #   expectedStatusCodes:
+  #     - 200
+  #     - 422
+  #   check: "https"
+  #   headers:
+  #     - "Authorization: Bearer "
+  #     - "Content-Type: application/json"
+  # - name: Interpreter Update Time API
+  #   url: https://app.connecthear.org/api/v1/interpreter/update-time
+  #   method: POST
+  #   expectedStatusCodes:
+  #   - 200
+  #   - 422
+  #   check: "https"
+  #   headers:
+  #     - "Authorization: Bearer "
+  #     - "Content-Type: application/json"
 
 status-website:
   baseUrl: /v1-app-uptime
