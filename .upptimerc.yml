@@ -128,7 +128,7 @@ sites:
     method: GET
     headers:
       - "Content-Type: application/json;charset=UTF-8"
-      - "Authorization: Bearer {{TOKEN}}"  # Token will be dynamically replaced
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFkODdhN2RmMTljN2ZjNjlhNjk5MjU3MDc5ZGM2MmU5ZGY5YzU4ZWIwZjA5NzIyN2ZhNTExZDViNTkwZWY2Nzk0NDAxNDJhMDE4MTUxM2YyIn0.eyJhdWQiOiIxIiwianRpIjoiMWQ4N2E3ZGYxOWM3ZmM2OWE2OTkyNTcwNzlkYzYyZTlkZjljNThlYjBmMDk3MjI3ZmE1MTFkNWI1OTBlZjY3OTQ0MDE0MmEwMTgxNTEzZjIiLCJpYXQiOjE3Mjg5OTkzNDcsIm5iZiI6MTcyODk5OTM0NywiZXhwIjoxNzYwNTM1MzQ3LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.qRjC-oV0Bf2HZ1Td3gav24RiVenS8Z-1AuECICtbVEWDXbRVjNo6lljBD2J3t2Dz5UwF_4JEKtu0wzYbKEh9uIRfAE2-ZVfgitljGB1F_VU-87JlhDwdqXCfI43EJvqBOwEa8AKs5szfM9CQIx98uNByEx5HWJMvTIoEMP1bv4AfJGV0gf7584BXIijc39YySVsxoTnSDQrDRRhSF-CZYQcWI5EyuwPT3hM3n8X7pPnAi-4OsP20dy3siJ7vvHOT4CuW7mkpijFywp9QRJcEY3RnL7Ll-3erXUWy7Vgu_XC48CbwIjwUamgFlaswKoNXHtxvjGd5nJDcSyeTbf2PmJ4q0dmEezt2XK75Ln0gtiHNxLoUTNXJw8pQR-Eui-_38iEWap-9gpSlbuiHvVsSzfzDEXglf5jWUnGxeydUJJAvQ7vW2P-kwYVBuotb42lBsg9h2OPUj631S_VoKMYQPDOGj_50k3NxW27LAHMIuZeAzVfE9Vr8Foy3p-r2R2tD9Pp4b9kYmXadqRvVVLLKEX7B52ppdGZNGslR84ZytN1Nv9lslLkU32dTypcAAMQkYCDTvk7d_kvupttqtmQQjIURe_-tSxPSNCAEUveWgzleXx2PMzfhbLOEBpwaw2xdCAGYE8SmH0GRzZAzGrAZc1s-AadawfwSSRreo22FbNs"  # Token will be dynamically replaced
     expectedStatusCodes:
       - 200
       - 403  # Account disabled by user or company
@@ -138,7 +138,7 @@ sites:
     method: POST
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}"  # Token will be dynamically replaced
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFkODdhN2RmMTljN2ZjNjlhNjk5MjU3MDc5ZGM2MmU5ZGY5YzU4ZWIwZjA5NzIyN2ZhNTExZDViNTkwZWY2Nzk0NDAxNDJhMDE4MTUxM2YyIn0.eyJhdWQiOiIxIiwianRpIjoiMWQ4N2E3ZGYxOWM3ZmM2OWE2OTkyNTcwNzlkYzYyZTlkZjljNThlYjBmMDk3MjI3ZmE1MTFkNWI1OTBlZjY3OTQ0MDE0MmEwMTgxNTEzZjIiLCJpYXQiOjE3Mjg5OTkzNDcsIm5iZiI6MTcyODk5OTM0NywiZXhwIjoxNzYwNTM1MzQ3LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.qRjC-oV0Bf2HZ1Td3gav24RiVenS8Z-1AuECICtbVEWDXbRVjNo6lljBD2J3t2Dz5UwF_4JEKtu0wzYbKEh9uIRfAE2-ZVfgitljGB1F_VU-87JlhDwdqXCfI43EJvqBOwEa8AKs5szfM9CQIx98uNByEx5HWJMvTIoEMP1bv4AfJGV0gf7584BXIijc39YySVsxoTnSDQrDRRhSF-CZYQcWI5EyuwPT3hM3n8X7pPnAi-4OsP20dy3siJ7vvHOT4CuW7mkpijFywp9QRJcEY3RnL7Ll-3erXUWy7Vgu_XC48CbwIjwUamgFlaswKoNXHtxvjGd5nJDcSyeTbf2PmJ4q0dmEezt2XK75Ln0gtiHNxLoUTNXJw8pQR-Eui-_38iEWap-9gpSlbuiHvVsSzfzDEXglf5jWUnGxeydUJJAvQ7vW2P-kwYVBuotb42lBsg9h2OPUj631S_VoKMYQPDOGj_50k3NxW27LAHMIuZeAzVfE9Vr8Foy3p-r2R2tD9Pp4b9kYmXadqRvVVLLKEX7B52ppdGZNGslR84ZytN1Nv9lslLkU32dTypcAAMQkYCDTvk7d_kvupttqtmQQjIURe_-tSxPSNCAEUveWgzleXx2PMzfhbLOEBpwaw2xdCAGYE8SmH0GRzZAzGrAZc1s-AadawfwSSRreo22FbNs"  # Token will be dynamically replaced
     body: '{"current_password": "your_current_password_here", "password": "your_new_password_here", "password_confirmation": "your_new_password_here"}'
     expectedStatusCodes:
       - 200
@@ -149,7 +149,7 @@ sites:
     method: POST
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer {{TOKEN}}"  # Token will be dynamically replaced
+      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFkODdhN2RmMTljN2ZjNjlhNjk5MjU3MDc5ZGM2MmU5ZGY5YzU4ZWIwZjA5NzIyN2ZhNTExZDViNTkwZWY2Nzk0NDAxNDJhMDE4MTUxM2YyIn0.eyJhdWQiOiIxIiwianRpIjoiMWQ4N2E3ZGYxOWM3ZmM2OWE2OTkyNTcwNzlkYzYyZTlkZjljNThlYjBmMDk3MjI3ZmE1MTFkNWI1OTBlZjY3OTQ0MDE0MmEwMTgxNTEzZjIiLCJpYXQiOjE3Mjg5OTkzNDcsIm5iZiI6MTcyODk5OTM0NywiZXhwIjoxNzYwNTM1MzQ3LCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.qRjC-oV0Bf2HZ1Td3gav24RiVenS8Z-1AuECICtbVEWDXbRVjNo6lljBD2J3t2Dz5UwF_4JEKtu0wzYbKEh9uIRfAE2-ZVfgitljGB1F_VU-87JlhDwdqXCfI43EJvqBOwEa8AKs5szfM9CQIx98uNByEx5HWJMvTIoEMP1bv4AfJGV0gf7584BXIijc39YySVsxoTnSDQrDRRhSF-CZYQcWI5EyuwPT3hM3n8X7pPnAi-4OsP20dy3siJ7vvHOT4CuW7mkpijFywp9QRJcEY3RnL7Ll-3erXUWy7Vgu_XC48CbwIjwUamgFlaswKoNXHtxvjGd5nJDcSyeTbf2PmJ4q0dmEezt2XK75Ln0gtiHNxLoUTNXJw8pQR-Eui-_38iEWap-9gpSlbuiHvVsSzfzDEXglf5jWUnGxeydUJJAvQ7vW2P-kwYVBuotb42lBsg9h2OPUj631S_VoKMYQPDOGj_50k3NxW27LAHMIuZeAzVfE9Vr8Foy3p-r2R2tD9Pp4b9kYmXadqRvVVLLKEX7B52ppdGZNGslR84ZytN1Nv9lslLkU32dTypcAAMQkYCDTvk7d_kvupttqtmQQjIURe_-tSxPSNCAEUveWgzleXx2PMzfhbLOEBpwaw2xdCAGYE8SmH0GRzZAzGrAZc1s-AadawfwSSRreo22FbNs"  # Token will be dynamically replaced
     body: '{"device_token": "your_device_token_here", "device_type": "your_device_type_here"}'
     expectedStatusCodes:
       - 200
