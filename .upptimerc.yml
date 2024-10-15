@@ -45,7 +45,7 @@ jobs:
       run: |
         response=$(curl -X POST "https://app.connecthear.org/api/v1/customer/login" \
           -H "Content-Type: application/json" \
-          -d '{"email": "${{ secrets.API_USERNAME }}", "password": "${{ secrets.API_PASSWORD }}"}')
+          -d '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment"}')
         
         # Extract token from the response, assuming it's in a field called 'token'
         token=$(echo $response | jq -r '.token')
