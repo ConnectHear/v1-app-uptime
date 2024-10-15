@@ -83,7 +83,7 @@ sites:
     check: "http"
     headers:
       - "Content-Type: application/json"
-  - name: Customer Code Verfication API # Monitoring the Verify Code API
+  - name: Customer Code Verification API # Monitoring the Verify Code API
     url: https://app.connecthear.org/api/v1/customer/verify-code
     method: POST
     body: '{"email": "uptime@connecthear.org", "verification_code": "1234", "password": "connecthearapplicationdevelopment", "password_confirmation": "connecthearapplicationdevelopment1"}'
@@ -93,7 +93,7 @@ sites:
     check: "http"
     headers:
       - "Content-Type: application/json"
-  - name: Customer sms Code Verification API # Monitoring the Verify SMS Code API
+  - name: Customer SMS Code Verification API # Monitoring the Verify SMS Code API
     url: https://app.connecthear.org/api/v1/customer/verify-sms-code
     method: POST
     body: '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "mobile_number": "1234567890", "verification_code": "1234"}'
@@ -128,423 +128,42 @@ sites:
     method: GET
     headers:
       - "Content-Type: application/json;charset=UTF-8"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
+      - "Authorization: Bearer {{TOKEN}}"  # Token will be dynamically replaced
     expectedStatusCodes:
       - 200
       - 403  # Account disabled by user or company
     check: "http"
-
-
-
-
-  - name: Customer Update Device Token API # Monitoring the Update Device Token API
-    url: https://app.connecthear.org/api/v1/customer/update-device-token
-    method: POST
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "http"
   - name: Customer Change Password API # Monitoring the Change Password API
     url: https://app.connecthear.org/api/v1/customer/change-password
     method: POST
     headers:
       - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "http"
-  - name: Customer Update Device Token API # Monitoring the Update Device Token API
-    url: https://app.connecthear.org/api/v1/customer/update-device-token
-    method: POST
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-    body: '{"device_token": "your_device_token_here", "device_type": "your_device_type_here"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "http"
-  - name: Customer Change Password API # Monitoring the Change Password API
-    url: https://app.connecthear.org/api/v1/customer/change-password
-    method: POST
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
+      - "Authorization: Bearer {{TOKEN}}"  # Token will be dynamically replaced
     body: '{"current_password": "your_current_password_here", "password": "your_new_password_here", "password_confirmation": "your_new_password_here"}'
     expectedStatusCodes:
       - 200
       - 422
     check: "http"
-  - name: Customer Files Add API
-    url: https://app.connecthear.org/api/v1/customer/files-add
+  - name: Customer Update Device Token API # Monitoring the Update Device Token API
+    url: https://app.connecthear.org/api/v1/customer/update-device-token
     method: POST
-    body: '{"avatar": "<base64_encoded_image>", "cnic": "<base64_encoded_image>"}'
+    headers:
+      - "Content-Type: application/json"
+      - "Authorization: Bearer {{TOKEN}}"  # Token will be dynamically replaced
+    body: '{"device_token": "your_device_token_here", "device_type": "your_device_type_here"}'
     expectedStatusCodes:
       - 200
       - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-  - name: Customer Add Reviews API
-    url: https://app.connecthear.org/api/v1/customer/add-reviews
-    method: POST
-    body: '{"monitoring_id": "example_monitoring_id", "rating": 4, "reviews": "This is a test review."}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-  - name: Customer Complaint API
-    url: https://app.connecthear.org/api/v1/customer/create-complaint
-    method: POST
-    body: '{"contact_number": "1234567890", "complaint": "This is a test complaint."}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-  - name: Customer Create Video Session API
-    url: https://app.connecthear.org/api/v1/customer/create-video-session
-    method: POST
-    body: '{"latitude": 25.276987, "longitude": 55.296249}'
-    expectedStatusCodes:
-      - 200
-      - 402
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-  - name: Customer Create Call API
-    url: https://app.connecthear.org/api/v1/customer/create-call
-    method: POST
-    body: '{"monitoring_id": "example-monitoring-id"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-  - name: ConnectHear Get Reviews API
-    url: https://app.connecthear.org/api/v1/customer/get-reviews
-    method: GET
-    expectedStatusCodes:
-      - 200
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-  - name: Customer Plans API
-    url: https://app.connecthear.org/api/v1/customer/get-plans
-    method: GET
-    expectedStatusCodes:
-      - 200
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-  - name: Customer Update Profile API
-    url: https://app.connecthear.org/api/v1/customer/update-profile
-    method: POST
-    body: '{"name": "Test User", "date_of_birth": "1990-01-01", "gender": "Male", "mobile_number": "1234567890", "avatar": "base64_encoded_image_data"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-  - name: Customer Subscription API
-    url: https://app.connecthear.org/api/v1/customer/make-subscription
-    method: POST
-    body: '{"plan_id": "123456"}'
-    expectedStatusCodes:
-      - 200
-      - 400
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-  - name: Customer Update Monitoring Session Status API
-    url: https://app.connecthear.org/api/v1/customer/update-monitoring-session-status
-    method: POST
-    body: '{"monitoring_id": "abc123", "status": 2, "call_duration": "00:30:00"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-  - name: Customer Get Call Logs API
-    url: https://app.connecthear.org/api/v1/customer/get-call-logs
-    method: GET
-    expectedStatusCodes:
-      - 200
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-      - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-    # - name: Customer Logout API # Monitoring the Logout API
-    # url: https://app.connecthear.org/api/v1/customer/logout
-    # method: POST
-    # headers:
-    #   - "Content-Type: application/json"
-    #   - "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjA0YzZkNWE3Y2RkY2NmZjlhOTM3ZDViYzQ0M2RhZDc0YTk1YWQ0YmE0MjY3YTIyNzcwZGQxZWNmZjZkMmZlYTVkODg1ZWFkNzZjMmJiMTI2In0.eyJhdWQiOiIxIiwianRpIjoiMDRjNmQ1YTdjZGRjY2ZmOWE5MzdkNWJjNDQzZGFkNzRhOTVhZDRiYTQyNjdhMjI3NzBkZDFlY2ZmNmQyZmVhNWQ4ODVlYWQ3NmMyYmIxMjYiLCJpYXQiOjE3Mjg5OTgzNTIsIm5iZiI6MTcyODk5ODM1MiwiZXhwIjoxNzYwNTM0MzUyLCJzdWIiOiIxNTY4NCIsInNjb3BlcyI6W119.Kd2YqUFkw6aIk97ic0QhhK8dfpWhNI67lPg_QMWewTS2YyvLVsPiP6TvS_rNdFYwBRxKAQKuObaeIrnHACfqVMFsa731uRE5VaKBR7EXBi9QtxdgawhpvBoEvXS30Kqmjrgi_5LY2yhUvrfIkzegs9vIrC6m-wqBvGZa5zvIfNEX1yga8qO6HM9-CueHoYtJQ3rWLgR7iOmaPThr0hkIow6uQT_pEQT2cvlUcJvMvBoSIrPWNAtnOd4QWqMIFJXKDm2DCJMSvpKdNIvjSsoe_znUyuHuR8EX4DmzTTZw5EQ5uKmBUtg-CJCRSyiZ2vjIEDGzTlbMe53sc08MJ5IoBe9UgPantxAEAHoX6bPjNopoEI3zLeTeoJJUOKenb8tdbgWHtEEG1hZaUErzpVsxEnAsAFSqz5fHjua1KCDqI8NrY2S5XzyeTtrGh7JA9gfZ8N5ntaqqkM3IOKEoudeYfQAzQ8BwnSpDsVB64QkOibkme-3WG1Q5X_3mkB51elpWZF0mNKz1btkEVIBHt3h8yr_7jaVyvl0PT3bpBz_VSBIX-GV7g-a_FpBr9w4uYHr4546l-lC0YOECn9AWQfTTlk0vpx3clS7JOzYS3Mf0BiuiF8HpYoXa4aTeV4mwTe3Yymu_EVsTS26eWwklohHKAVyqoS4_WRFtMpTdBI7cGPY"
-    # expectedStatusCodes:
-    #   - 200
-    #   - 422
-    # check: "http"
-  - name: Interpreter Sign-Up API
-    url: https://app.connecthear.org/api/v1/interpreter/sign-up
-    method: POST
-    body: '{"name": "Upptime", "email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "mobile_number": "1234567890", "gender": "male", "date_of_birth": "1990-01-01", "occupation": "Interpreter", "address": "123 Main St", "latitude": "34.0522", "longitude": "-118.2437", "avatar": "base64_encoded_image", "cnic": "base64_encoded_cnic"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-  - name: Interpreter Verify SMS Code API
-    url: https://app.connecthear.org/api/v1/interpreter/verify-sms-code
-    method: POST
-    body: '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment", "mobile_number": "1234567890", "otp": "1234"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-  - name: Interpreter Login API
-    url: https://app.connecthear.org/api/v1/interpreter/login
-    method: POST
-    body: '{"email": "uptime@connecthear.org", "password": "connecthearapplicationdevelopment"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-  - name: Interpreter Google Login API
-    url: https://app.connecthear.org/api/v1/interpreter/google-login
-    method: POST
-    body: '{"name": "Upptime", "email": "uptime@connecthear.org", "google_id": "your_google_id"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-  - name: Interpreter Forgot Password API
-    url: https://app.connecthear.org/api/v1/interpreter/forgot-password
-    method: POST
-    body: '{"email": "uptime@connecthear.org"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-  - name: Interpreter Verify Code API
-    url: https://app.connecthear.org/api/v1/interpreter/verify-code
-    method: POST
-    body: '{"email": "uptime@connecthear.org", "verification_code": "1234"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-  - name: Interpreter Reset Password API
-    url: https://app.connecthear.org/api/v1/interpreter/reset-password
-    method: POST
-    body: '{"email": "uptime@connecthear.org", "password": "new_password", "password_confirmation": "new_password"}'
-    expectedStatusCodes:
-      - 200
-      - 422
-    check: "https"
-    headers:
-      - "Content-Type: application/json"
-  # - name: Interpreter Files Add API
-  #   url: https://app.connecthear.org/api/v1/interpreter/files-add
-  #   method: POST
-  #   expectedStatusCodes:
-  #     - 200
-  #     - 422
-  #   check: "https"
-  #   body: '{"avatar": "base64_encoded_avatar", "cnic": "base64_encoded_cnic"}'
-  #   headers:
-  #     - "Content-Type: application/json"
-  #     - "Authorization: Bearer "
-  # - name: Interpreter Update Device Token API
-  #   url: https://app.connecthear.org/api/v1/interpreter/update-device-token
-  #   method: POST
-  #   expectedStatusCodes:
-  #     - 200
-  #     - 422
-  #   check: "https"
-  #   body: '{"device_token": "your_device_token", "device_type": "your_device_type"}'
-  #   headers:
-  #     - "Content-Type: application/json"
-  #     - "Authorization: Bearer "
-  # - name: Interpreter Logout API
-  #   url: https://app.connecthear.org/api/v1/interpreter/logout
-  #   method: POST
-  #   expectedStatusCodes:
-  #   - 200
-  #   - 422
-  #   check: "https"
-  #   body: {}
-  #   headers:
-  #     - "Authorization: Bearer "
-  # - name: Interpreter Get Profile API
-  #   url: https://app.connecthear.org/api/v1/interpreter/get-profile
-  #   method: GET
-  #   expectedStatusCodes:
-  #     - 200
-  #     - 401
-  #   check: "https"
-  #   body: {}
-  #   headers:
-  #     - "Authorization: Bearer "
-  # - name: Interpreter Change Password API
-  #   url: https://app.connecthear.org/api/v1/interpreter/change-password
-  #   method: POST
-  #   body: '{"current_password": "current_password", "password": "new_password", "password_confirmation": "new_password"}'
-  #   expectedStatusCodes:
-  #     - 200
-  #     - 422
-  #   check: "https"
-  #   headers:
-  #     - "Authorization: Bearer "
-  #     - "Content-Type: application/json"
+    check: "http"
 
-  # - name: Interpreter Create Complaint API
-  #   url: https://app.connecthear.org/api/v1/interpreter/create-complaint
-  #   method: POST
-  #   body: '{"contact_number": "1234567890", "complaint": "Complaint description here"}'
-  #   expectedStatusCodes:
-  #     - 200
-  #     - 422
-  #   check: "https"
-  #   headers:
-  #     - "Content-Type: application/json"
-  #     - "Authorization: Bearer "
-  # - name: Interpreter Update Archive ID API
-  #   url: https://app.connecthear.org/api/v1/interpreter/update-archive-id
-  #   method: POST
-  #   body: '{"monitoring_id": "your_monitoring_id"}'
-  #   expectedStatusCodes:
-  #     - 200
-  #     - 422
-  #   check: "https"
-  #   headers:
-  #     - "Authorization: Bearer "
-  #     - "Content-Type: application/json"
-  # - name: Interpreter Get Reviews API
-  #   url: https://app.connecthear.org/api/v1/interpreter/get-reviews
-  #   method: GET
-  #   expectedStatusCodes:
-  #     - 200
-  #     - 422
-  #   check: "https"
-  #   headers:
-  #     - "Authorization: Bearer "
-  #     - "Content-Type: application/json"
-  # - name: Interpreter Update Profile API
-  #   url: https://app.connecthear.org/api/v1/interpreter/update-profile
-  #   method: POST
-  #   body: '{"name": "John Doe", "date_of_birth": "1990-01-01", "gender": "male", "occupation": "Interpreter", "address": "123 Street, City", "avatar": "avatar_base64_string"}'
-  #   expectedStatusCodes:
-  #     - 200
-  #     - 422
-  #   check: "https"
-  #   headers:
-  #     - "Authorization: Bearer "
-  #     - "Content-Type: application/json"
-
-  # - name: Interpreter Update Monitoring Session Status API
-  #   url: https://app.connecthear.org/api/v1/interpreter/update-monitoring-session-status
-  #   method: POST
-  #   body: '{"monitoring_id": "example_monitoring_id", "status": 1, "call_duration": "00:30:00"}'
-  #   expectedStatusCodes:
-  #     - 200
-  #     - 422
-  #   check: "https"
-  #   headers:
-  #     - "Authorization: Bearer "
-  #     - "Content-Type: application/json"
-
-  # - name: Interpreter Add Reviews API
-  #   url: https://app.connecthear.org/api/v1/interpreter/add-reviews
-  #   method: POST
-  #   body: '{"monitoring_id": "example_monitoring_id", "rating": 4, "reviews": "Great session!"}'
-  #   expectedStatusCodes:
-  #     - 200
-  #     - 422
-  #   check: "https"
-  #   headers:
-  #     - "Authorization: Bearer "
-  #     - "Content-Type: application/json"
-
-  # - name: Interpreter Update Latitude and Longitude API
-  #   url: https://app.connecthear.org/api/v1/interpreter/update-latitude-longitude
-  #   method: POST
-  #   body: '{"latitude": 24.8607, "longitude": 67.0011}'
-  #   expectedStatusCodes:
-  #     - 200
-  #     - 422
-  #   check: "https"
-  #   headers:
-  #     - "Authorization: Bearer "
-  #     - "Content-Type: application/json"
-  # - name: Interpreter Get Call Logs API
-  #   url: https://app.connecthear.org/api/v1/interpreter/get-call-logs
-  #   method: GET
-  #   expectedStatusCodes:
-  #     - 200
-  #     - 422
-  #   check: "https"
-  #   headers:
-  #     - "Authorization: Bearer "
-  #     - "Content-Type: application/json"
-  # - name:  Interpreter Manage Online Status API
-  #   url: https://app.connecthear.org/api/v1/interpreter/online-status
-  #   method: POST
-  #   expectedStatusCodes:
-  #     - 200
-  #     - 422
-  #   check: "https"
-  #   headers:
-  #     - "Authorization: Bearer "
-  #     - "Content-Type: application/json"
-  # - name: Interpreter Update Time API
-  #   url: https://app.connecthear.org/api/v1/interpreter/update-time
-  #   method: POST
-  #   expectedStatusCodes:
-  #   - 200
-  #   - 422
-  #   check: "https"
-  #   headers:
-  #     - "Authorization: Bearer "
-  #     - "Content-Type: application/json"
+# Additional APIs can be added following the same structure
 
 status-website:
   baseUrl: /v1-app-uptime
   logoUrl: https://avatars.githubusercontent.com/u/94858144?s=400&u=21671f502bedc2181ba2a90086fcf842d6231d1c&v=4
   name: ConnectHear v1 App Uptime
   introTitle: "This is ConnectHear's uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a status page which uses **real-time** data from our [GitHub repository](https://github.com/ConnectHear/v1-app-runtime). No server required — just GitHub Actions, Issues, and Pages. 
+  introMessage: This is a status page which uses **real-time** data from our [GitHub repository](https://github.com/ConnectHear/v1-app-uptime). No server required — just GitHub Actions, Issues, and Pages. 
   navbar:
     - title: Status
       href: /
