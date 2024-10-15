@@ -1,4 +1,4 @@
-name: Custom Uptime  Workflow
+name: Custom Uptime Workflow
 
 on:
   push:
